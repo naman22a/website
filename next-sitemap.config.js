@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: process.env.SITE_URL,
+    siteUrl: 'https://namanarora.vercel.app',
     generateRobotsTxt: true,
     robotsTxtOptions: {
         policies: [{ userAgent: '*', allow: '/' }]
