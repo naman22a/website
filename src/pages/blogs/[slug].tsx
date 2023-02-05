@@ -23,7 +23,7 @@ const BlogDetails = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
     const slug = router.query.slug as string;
 
     return (
-        <div className="pt-20">
+        <div className="py-20">
             <Head>
                 <title>{pageTitle}</title>
             </Head>
