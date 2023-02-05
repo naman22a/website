@@ -1,0 +1,42 @@
+import path from 'path';
+import fs from 'fs';
+import matter from 'gray-matter';
+import { Blog } from '../interfaces';
+
+const BLOGS_PATH = path.join(process.cwd(), 'src/blogs/');
+
+export const getSlugs = (): string[] => {
+    const files = fs.readdirSync(BLOGS_PATH, { encoding: 'utf-8' });
+
+    return files.map(file => file.split('.')[0]);
+};
+
+export const getBlogFromSlug = (slug: string): Blog => {
+    const blogPath = path.join(BLOGS_PATH, `${slug}.mdx`);
+    const source = fs.readFileSync(blogPath);
+    const { content, data } = matter(source);
+
+    return {
+        content,
+        meta: {
+            slug,
+            title: data.title,
+            excerpt: data.excerpt,
+            tags: data.tags.sort(),
+            date: data.date
+        }
+    };
+};
+
+export const getBlogs = () => {
+    const blogs = getSlugs()
+        .map(slug => getBlogFromSlug(slug))
+        .sort((a, b) => {
+            if (a.meta.date > b.meta.date) return 1;
+            if (a.meta.date < b.meta.date) return -1;
+            return 0;
+        });
+    blogs.reverse();
+
+    return blogs;
+};

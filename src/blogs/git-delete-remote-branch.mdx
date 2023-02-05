@@ -1,0 +1,15 @@
+---
+title: How to delete a remote branch in git ?
+tags:
+    - git
+date: 13-11-2022
+excerpt: In this blog i will show you how to delete a git branch with git commands as well as from github
+---
+
+# Deleting remote branches in Git
+
+To delete a remote branch, we do not use the "git branch" command - but instead "git push" with the "--delete" flag:
+
+```shell
+$ git push origin --delete feature/login
+```
