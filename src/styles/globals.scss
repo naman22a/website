@@ -20,6 +20,20 @@
     p {
         @apply text-ctp-text font-Hack;
     }
+
+    // Scroll bar
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        @apply bg-ctp-base;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply bg-ctp-surface1 hover:bg-ctp-mauve;
+        border-radius: 10px;
+    }
 }
 
 @layer utilities {
