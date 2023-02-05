@@ -13,6 +13,12 @@ export default function Document() {
                     content="Naman Arora Web Developer Website Portfolio"
                 />
                 <link rel="icon" href="/favicon.png" />
+
+                {/* Google search console */}
+                <meta
+                    name="google-site-verification"
+                    content="f1xJCJmDE2FV3kTuVZ5ETtGLOspPpCivXtIRv5HK30Y"
+                />
             </Head>
             <body>
                 <Main />
