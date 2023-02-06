@@ -1,12 +1,15 @@
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
-import { getBlogs } from '@/services';
-import { BlogMeta } from '@/interfaces';
 import Head from 'next/head';
-import { BlogCard, Tag } from '@/components';
+import { getBlogs } from '@/services';
+import { BlogMeta, FooterData } from '@/interfaces';
+import { BlogCard, Footer } from '@/components';
+import { client } from '@/lib';
 
-const Blogs = ({ blogs }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Blogs = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
+    const { blogs, footerData } = props;
+
     return (
-        <div className="pt-20">
+        <>
             <Head>
                 <title>Blogs | Naman Arora</title>
             </Head>
@@ -16,19 +19,24 @@ const Blogs = ({ blogs }: InferGetStaticPropsType<typeof getStaticProps>) => {
                     <BlogCard key={blog.slug} {...blog} />
                 ))}
             </div>
-        </div>
+            <Footer {...footerData} />
+        </>
     );
 };
 
 interface DataProps {
     blogs: BlogMeta[];
+    footerData: FooterData;
 }
 
 export const getStaticProps: GetStaticProps<DataProps> = async () => {
     const blogs = getBlogs().map(blog => blog.meta);
+    const footerData = (
+        await client.fetch("*[_type == 'footer']")
+    )[0] as FooterData;
 
     return {
-        props: { blogs }
+        props: { blogs, footerData }
     };
 };
 

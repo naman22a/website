@@ -1,16 +1,17 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
 import { getBlogs } from '@/services';
-import { BlogMeta } from '@/interfaces';
+import { BlogMeta, FooterData } from '@/interfaces';
 import { capitalize } from '@/utils';
-import { BlogCard } from '@/components';
+import { BlogCard, Footer } from '@/components';
+import { client } from '@/lib';
 
 const TagPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
-    const { tag, blogs } = props;
+    const { tag, blogs, footerData } = props;
     const pageTitle = `${capitalize(tag)} | Naman Arora`;
 
     return (
-        <div className="pt-20">
+        <>
             <Head>
                 <title>{pageTitle}</title>
             </Head>
@@ -21,23 +22,29 @@ const TagPage = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
             {blogs?.map(blog => (
                 <BlogCard key={blog.slug} {...blog} />
             ))}
-        </div>
+            <Footer {...footerData} />
+        </>
     );
 };
 
 interface DataProps {
     tag: string;
     blogs: BlogMeta[];
+    footerData: FooterData;
 }
 
 export const getStaticProps: GetStaticProps<DataProps> = async ({ params }) => {
     const { tag } = params as { tag: string };
     const blogs = getBlogs().filter(post => post.meta.tags.includes(tag));
+    const footerData = (
+        await client.fetch("*[_type == 'footer']")
+    )[0] as FooterData;
 
     return {
         props: {
             tag,
-            blogs: blogs.map(post => post.meta)
+            blogs: blogs.map(post => post.meta),
+            footerData
         }
     };
 };

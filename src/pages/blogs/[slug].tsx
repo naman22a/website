@@ -1,30 +1,27 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next';
-import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Image from 'next/image';
 import { getBlogFromSlug, getSlugs } from '@/services';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { serialize } from 'next-mdx-remote/serialize';
-import { BlogMeta } from '@/interfaces';
+import { BlogMeta, FooterData } from '@/interfaces';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeHighlight from 'rehype-highlight';
 import 'highlight.js/styles/base16/dracula.css';
 import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
-import { Tag } from '@/components';
+import { Footer, Tag } from '@/components';
+import { client } from '@/lib';
 dayjs.extend(customParseFormat);
 
 const BlogDetails = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
-    const { meta, source } = props;
-    const { title, excerpt, tags, date } = meta;
+    const { meta, source, footerData } = props;
+    const { title, tags, date } = meta;
     const pageTitle = `${title} | Naman Arora`;
 
-    const router = useRouter();
-    const slug = router.query.slug as string;
-
     return (
-        <div className="py-20">
+        <>
             <Head>
                 <title>{pageTitle}</title>
             </Head>
@@ -45,7 +42,8 @@ const BlogDetails = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
             <div className="prose">
                 <MDXRemote {...source} components={{ Image }} />
             </div>
-        </div>
+            <Footer {...footerData} />
+        </>
     );
 };
 
@@ -55,6 +53,7 @@ interface DataProps {
         Record<string, string>
     >;
     meta: BlogMeta;
+    footerData: FooterData;
 }
 
 export const getStaticProps: GetStaticProps<DataProps> = async ({ params }) => {
@@ -69,10 +68,15 @@ export const getStaticProps: GetStaticProps<DataProps> = async ({ params }) => {
             ]
         }
     });
+    const footerData = (
+        await client.fetch("*[_type == 'footer']")
+    )[0] as FooterData;
+
     return {
         props: {
             source: mdxSource,
-            meta
+            meta,
+            footerData
         }
     };
 };

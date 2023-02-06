@@ -12,12 +12,12 @@ const Footer: React.FC<Props> = props => {
         props;
     return (
         <motion.footer
-            className="text-gray-600 dark:text-gray-300 body-font"
+            className="text-gray-600 body-font mt-auto"
             whileInView={{ y: [100, 0], opacity: [0, 1] }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
         >
-            <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+            <div className="container py-8 mx-auto flex items-center sm:flex-row flex-col">
                 <Link href="/">
                     <Image
                         src={images.logo}
@@ -48,7 +48,7 @@ const Footer: React.FC<Props> = props => {
                         <svg
                             viewBox="0 0 24 24"
                             aria-hidden="true"
-                            className="h-7 w-7 fill-gray-500 dark:fill-neutral-200 group-hover:fill-ctp-red"
+                            className="h-7 w-7 fill-gray-500  group-hover:fill-ctp-red"
                         >
                             <path
                                 fillRule="evenodd"
@@ -69,7 +69,7 @@ const Footer: React.FC<Props> = props => {
                             strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth="2"
-                            className="w-6 h-6 fill-gray-500 dark:fill-neutral-200 group-hover:fill-ctp-red"
+                            className="w-6 h-6 fill-gray-500  group-hover:fill-ctp-red"
                             viewBox="0 0 24 24"
                         >
                             <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
@@ -88,7 +88,7 @@ const Footer: React.FC<Props> = props => {
                             strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth="2"
-                            className="w-6 h-6 stroke-gray-500 dark:stroke-neutral-200 group-hover:stroke-ctp-red"
+                            className="w-6 h-6 stroke-gray-500 group-hover:stroke-ctp-red"
                             viewBox="0 0 24 24"
                         >
                             <rect
