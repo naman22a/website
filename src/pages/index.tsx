@@ -21,7 +21,7 @@ const Index = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
         footerData
     } = props;
     return (
-        <div>
+        <>
             <Head>
                 <title>Naman Arora</title>
             </Head>
@@ -30,7 +30,7 @@ const Index = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
             <Projects projects={projects} />
             <Contact {...contactData} />
             <Footer {...footerData} />
-        </div>
+        </>
     );
 };
 
