@@ -47,6 +47,10 @@
         h5,
         h6 {
             @apply mb-5 font-semibold tracking-wide;
+
+            a {
+                @apply text-ctp-peach;
+            }
         }
 
         p {
@@ -83,6 +87,10 @@
             code {
                 @apply whitespace-pre;
             }
+        }
+
+        a {
+            @apply text-ctp-sapphire underline;
         }
     }
 }
