@@ -12,7 +12,7 @@ const Footer: React.FC<Props> = props => {
         props;
     return (
         <motion.footer
-            className="text-gray-600 body-font mt-auto"
+            className="text-gray-600 body-font mt-auto w-full"
             whileInView={{ y: [100, 0], opacity: [0, 1] }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
