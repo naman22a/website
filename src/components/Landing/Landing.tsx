@@ -84,6 +84,7 @@ const Landing: React.FC<Props> = props => {
                     src={urlFor(image).url()}
                     height={200}
                     width={300}
+                    priority
                     alt="landing-image"
                     className="object-cover w-full"
                 />
