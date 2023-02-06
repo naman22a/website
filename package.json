@@ -31,6 +31,7 @@
     },
     "devDependencies": {
         "@catppuccin/tailwindcss": "^0.1.1",
+        "@next/bundle-analyzer": "^13.1.6",
         "@types/node": "^18.11.19",
         "@types/react": "^18.0.27",
         "@types/react-dom": "^18.0.10",
