@@ -17,7 +17,7 @@ const Footer: React.FC<Props> = props => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
         >
-            <div className="container py-8 mx-auto flex items-center sm:flex-row flex-col">
+            <div className="container py-8 flex items-center sm:flex-row flex-col">
                 <Link href="/">
                     <Image
                         src={images.logo}
