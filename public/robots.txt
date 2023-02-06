@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: undefined
+Host: https://namanarora.vercel.app
 
 # Sitemaps
-Sitemap: undefined/sitemap.xml
+Sitemap: https://namanarora.vercel.app/sitemap.xml
