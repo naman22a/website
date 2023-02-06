@@ -280,13 +280,6 @@
   dependencies:
     "@types/unist" "*"
 
-"@types/highlight.js@^10.1.0":
-  version "10.1.0"
-  resolved "https://registry.yarnpkg.com/@types/highlight.js/-/highlight.js-10.1.0.tgz#89bb0c202997d7a90a07bd2ec1f7d00c56bb90b4"
-  integrity sha512-77hF2dGBsOgnvZll1vymYiNUtqJ8cJfXPD6GG/2M0aLRc29PkvB7Au6sIDjIEFcSICBhCh2+Pyq6WSRS7LUm6A==
-  dependencies:
-    highlight.js "*"
-
 "@types/js-yaml@^4.0.0":
   version "4.0.5"
   resolved "https://registry.yarnpkg.com/@types/js-yaml/-/js-yaml-4.0.5.tgz#738dd390a6ecc5442f35e7f03fa1431353f7e138"
@@ -309,7 +302,7 @@
   resolved "https://registry.yarnpkg.com/@types/ms/-/ms-0.7.31.tgz#31b7ca6407128a3d2bbc27fe2d21b345397f6197"
   integrity sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==
 
-"@types/node@18.11.19":
+"@types/node@^18.11.19":
   version "18.11.19"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.11.19.tgz#35e26df9ec441ab99d73e99e9aca82935eea216d"
   integrity sha512-YUgMWAQBWLObABqrvx8qKO1enAvBUdjZOAWQ5grBAkp5LQv45jBvYKZ3oFS9iKRCQyFjqw6iuEa1vmFqtxYLZw==
@@ -319,14 +312,14 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.5.tgz#5f19d2b85a98e9558036f6a3cacc8819420f05cf"
   integrity sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==
 
-"@types/react-dom@18.0.10":
+"@types/react-dom@^18.0.10":
   version "18.0.10"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.0.10.tgz#3b66dec56aa0f16a6cc26da9e9ca96c35c0b4352"
   integrity sha512-E42GW/JA4Qv15wQdqJq8DL4JhNpB3prJgjgapN3qJT9K2zO5IIAQh4VXvCEDupoqAwnz0cY4RlXeC/ajX5SFHg==
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@18.0.27", "@types/react@>=16":
+"@types/react@*", "@types/react@>=16", "@types/react@^18.0.27":
   version "18.0.27"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.27.tgz#d9425abe187a00f8a5ec182b010d4fd9da703b71"
   integrity sha512-3vtRKHgVxu3Jp9t718R9BuzoD4NcQ8YJ5XRzsSKxNDiDonD2MXIT1TmSkenxuCycZJoQT5d2vE8LwWJxBC1gmA==
@@ -919,15 +912,15 @@ hey-listen@^1.0.8:
   resolved "https://registry.yarnpkg.com/hey-listen/-/hey-listen-1.0.8.tgz#8e59561ff724908de1aa924ed6ecc84a56a9aa68"
   integrity sha512-COpmrF2NOg4TBWUJ5UVyaCU2A88wEMkUPK4hNqyCkqHbxT92BbvfjoSozkAIIm6XhicGlJHhFdullInrdhwU8Q==
 
-highlight.js@*, highlight.js@^11.7.0, highlight.js@~11.7.0:
+highlight.js@~11.7.0:
   version "11.7.0"
   resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-11.7.0.tgz#3ff0165bc843f8c9bce1fd89e2fda9143d24b11e"
   integrity sha512-1rRqesRFhMO/PRF+G86evnyJkCgaZFOI+Z6kdj15TA18funfoqJXvgPCLSf0SWq3SRfg1j3HlDs8o4s3EGq1oQ==
 
 immutable@^4.0.0:
-  version "4.2.3"
-  resolved "https://registry.yarnpkg.com/immutable/-/immutable-4.2.3.tgz#a203cdda37a5a30bc351b982a1794c1930198815"
-  integrity sha512-IHpmvaOIX4VLJwPOuQr1NpeBr2ZG6vpIj3blsLVxXRWJscLioaJRStqC+NcBsLeCDsnGlPpXd5/WZmnE7MbsKA==
+  version "4.2.4"
+  resolved "https://registry.yarnpkg.com/immutable/-/immutable-4.2.4.tgz#83260d50889526b4b531a5e293709a77f7c55a2a"
+  integrity sha512-WDxL3Hheb1JkRN3sQkyujNlL/xRjAo3rJtaU5xeufUauG66JdMr32bLj4gF+vWl84DIA3Zxw7tiAjneYzRRw+w==
 
 inherits@^2.0.1, inherits@~2.0.3:
   version "2.0.4"
@@ -2105,7 +2098,7 @@ tunnel-agent@^0.6.0:
   dependencies:
     safe-buffer "^5.0.1"
 
-typescript@4.9.5:
+typescript@^4.9.5:
   version "4.9.5"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.9.5.tgz#095979f9bcc0d09da324d58d03ce8f8374cbe65a"
   integrity sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==
