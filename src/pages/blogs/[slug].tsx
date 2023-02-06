@@ -1,5 +1,4 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next';
-import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Image from 'next/image';
 import { getBlogFromSlug, getSlugs } from '@/services';
@@ -17,11 +16,8 @@ dayjs.extend(customParseFormat);
 
 const BlogDetails = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
     const { meta, source } = props;
-    const { title, excerpt, tags, date } = meta;
+    const { title, tags, date } = meta;
     const pageTitle = `${title} | Naman Arora`;
-
-    const router = useRouter();
-    const slug = router.query.slug as string;
 
     return (
         <div className="py-20">

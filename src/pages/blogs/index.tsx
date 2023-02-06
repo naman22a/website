@@ -2,7 +2,7 @@ import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { getBlogs } from '@/services';
 import { BlogMeta } from '@/interfaces';
 import Head from 'next/head';
-import { BlogCard, Tag } from '@/components';
+import { BlogCard } from '@/components';
 
 const Blogs = ({ blogs }: InferGetStaticPropsType<typeof getStaticProps>) => {
     return (
