@@ -1,7 +1,6 @@
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
-import { getBlogs } from '@/api';
+import { getBlogs } from '@/services';
 import { BlogMeta } from '@/interfaces';
-import Link from 'next/link';
 import Head from 'next/head';
 import { BlogCard, Tag } from '@/components';
 

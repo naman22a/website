@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
-import { getBlogs } from '@/api';
+import { getBlogs } from '@/services';
 import { BlogMeta } from '@/interfaces';
 import { capitalize } from '@/utils';
 import { BlogCard } from '@/components';
