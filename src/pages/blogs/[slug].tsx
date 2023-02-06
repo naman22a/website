@@ -9,6 +9,7 @@ import { BlogMeta } from '@/interfaces';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeHighlight from 'rehype-highlight';
+import 'highlight.js/styles/base16/dracula.css';
 import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
 import { Tag } from '@/components';
