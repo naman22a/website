@@ -8,7 +8,7 @@ interface Props extends BlogMeta {}
 const BlogCard: React.FC<Props> = blog => {
     return (
         <div key={blog.slug} className="font-Hack my-6">
-            <Link href={`blogs/${blog.slug}`}>
+            <Link href={`/blogs/${blog.slug}`}>
                 <h3 className="text-xl mb-2 flex items-center">
                     <span className="h-3 w-3 rounded-full inline-block bg-ctp-text mr-2"></span>
                     <span className="underline">{blog.title}</span>
