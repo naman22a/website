@@ -8,3 +8,4 @@ export { default as Contact } from './Contact/Contact';
 export { default as Footer } from './Footer/Footer';
 export { default as Tag } from './Tag/Tag';
 export { default as BlogCard } from './BlogCard/BlogCard';
+export { default as BackgroundAnimation } from './BackgroundAnimation/BackgroundAnimation';

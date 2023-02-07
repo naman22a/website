@@ -1,9 +1,7 @@
 import React from 'react';
-import { Button } from '@/components';
+import { BackgroundAnimation, Button } from '@/components';
 import { motion } from 'framer-motion';
 import { LandingData } from '@/interfaces';
-import { urlFor } from '@/lib';
-import Image from 'next/image';
 
 const variants = {
     hidden: { opacity: 0 },
@@ -24,15 +22,8 @@ const item = {
 interface Props extends LandingData {}
 
 const Landing: React.FC<Props> = props => {
-    const {
-        bgText1,
-        bgText2,
-        smallText,
-        name,
-        description,
-        buttonText,
-        image
-    } = props;
+    const { bgText1, bgText2, smallText, name, description, buttonText } =
+        props;
 
     return (
         <div className="flex flex-col lg:flex-row pt-20 lg:pt-0 lg:justify-between items-center lg:h-screen">
@@ -75,19 +66,12 @@ const Landing: React.FC<Props> = props => {
             </motion.div>
 
             <motion.div
-                className="relative lg:w-1/2"
+                className="relative lg:w-1/2 h-1/2 w-full lg:h-full overflow-hidden"
                 variants={variants}
                 initial="hidden"
                 animate="show"
             >
-                <Image
-                    src={urlFor(image).url()}
-                    height={200}
-                    width={300}
-                    priority
-                    alt="landing-image"
-                    className="object-cover w-full"
-                />
+                <BackgroundAnimation />
             </motion.div>
         </div>
     );
