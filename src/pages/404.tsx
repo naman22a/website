@@ -6,6 +6,7 @@ import { images } from '../constants';
 
 const NotFound: NextPage = () => {
     return (
+
         <div className="flex flex-col-reverse lg:flex-row items-center justify-start lg:justify-between w-full min-h-screen absolute top-0 left-0 px-5 md:px-0 pt-24 lg:pl-20">
             <Head>
                 <title>404 Not found | Naman Arora</title>
@@ -33,6 +34,7 @@ const NotFound: NextPage = () => {
                     </Link>
                 </div>
             </div>
+
             <div className="lg:w-1/2 pb-5 lg:pb-0">
                 <Image src={images.notFound} alt="404" />
             </div>

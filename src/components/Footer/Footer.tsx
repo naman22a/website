@@ -12,12 +12,12 @@ const Footer: React.FC<Props> = props => {
         props;
     return (
         <motion.footer
-            className="text-gray-600 body-font mt-auto"
+            className="text-gray-600 body-font mt-auto w-full"
             whileInView={{ y: [100, 0], opacity: [0, 1] }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
         >
-            <div className="container py-8 mx-auto flex items-center sm:flex-row flex-col">
+            <div className="container py-8 flex items-center sm:flex-row flex-col">
                 <Link href="/">
                     <Image
                         src={images.logo}
