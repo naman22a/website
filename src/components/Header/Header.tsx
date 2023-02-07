@@ -19,6 +19,7 @@ const Header: React.FC = () => {
         >
             <Link href="/">
                 <Image
+                    priority
                     src={images.logo}
                     alt="Naman Arora"
                     className="h-20 w-20 object-cover"
