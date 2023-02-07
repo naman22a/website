@@ -59,7 +59,7 @@ const SkillSet: React.FC<Props> = props => {
                     <p>{description}</p>
                 </motion.div>
             </div>
-            <div className="mb-20 capitalize font-Hack">
+            <div className="mb-20 capitalize font-Hack w-full">
                 <Skillbar
                     skills={skills}
                     colors={colors}
