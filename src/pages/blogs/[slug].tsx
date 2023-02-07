@@ -13,7 +13,6 @@ import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
 import { Footer, Tag } from '@/components';
 import { client } from '@/lib';
-import { motion } from 'framer-motion';
 dayjs.extend(customParseFormat);
 
 const BlogDetails = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
@@ -40,14 +39,9 @@ const BlogDetails = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
                     <Tag key={tag} tag={tag} />
                 ))}
             </div>
-            <motion.div
-                className="prose"
-                whileInView={{ y: [100, 0], opacity: [0, 1] }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-            >
+            <div className="prose">
                 <MDXRemote {...source} components={{ Image }} />
-            </motion.div>
+            </div>
             <Footer {...footerData} />
         </>
     );
