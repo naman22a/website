@@ -73,7 +73,7 @@ const Header: React.FC = () => {
 
             {/* mobile menu */}
             <nav
-                className={`flex flex-col absolute top-20 bg-ctp-red w-full px-4 py-10 text-white items-center justify-center select-none ${
+                className={`flex flex-col absolute top-20 bg-ctp-surface0 w-full px-4 py-10 text-white items-center justify-center select-none ${
                     open ? 'left-0' : 'left-full'
                 } transition-all duration-300 inline-block md:hidden`}
             >
