@@ -16,10 +16,10 @@ const BlogCard: React.FC<Props> = blog => {
             viewport={{ once: true }}
         >
             <Link href={`/blogs/${blog.slug}`}>
-                <h3 className="text-xl mb-2 flex items-center">
+                <h2 className="text-xl mb-2 flex items-center">
                     <span className="h-3 w-3 rounded-full inline-block bg-ctp-text mr-2"></span>
                     <span className="underline">{blog.title}</span>
-                </h3>
+                </h2>
             </Link>
             <p className="text-sm ml-3">{blog.excerpt}</p>
             <div className="mt-3 ml-3">
