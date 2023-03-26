@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { Header } from '@/components';
+import { Toaster } from 'react-hot-toast';
 
-interface Props {
-    children: React.ReactNode;
-}
+interface Props extends PropsWithChildren {}
 
 const Layout: React.FC<Props> = ({ children }) => {
     return (
@@ -12,6 +11,14 @@ const Layout: React.FC<Props> = ({ children }) => {
             <div className="pt-32 mx-5 lg:mx-20 min-h-screen flex flex-col items-start">
                 {children}
             </div>
+            <Toaster
+                toastOptions={{
+                    style: {
+                        backgroundColor: '#1e1e2e',
+                        color: '#cdd6f4'
+                    }
+                }}
+            />
         </>
     );
 };
