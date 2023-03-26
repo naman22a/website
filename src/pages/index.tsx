@@ -28,7 +28,12 @@ const Index = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
             <Landing {...landingData} />
             <SkillSet {...skillSetData} skills={skills} />
             <Projects projects={projects} />
-            <Contact {...contactData} />
+            <Contact
+                {...contactData}
+                githubLink={footerData.githubLink}
+                instagramLink={footerData.instagramLink}
+                twitterLink={footerData.twitterLink}
+            />
             <Footer {...footerData} />
         </>
     );

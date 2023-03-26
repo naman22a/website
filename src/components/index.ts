@@ -9,3 +9,5 @@ export { default as Footer } from './Footer/Footer';
 export { default as Tag } from './Tag/Tag';
 export { default as BlogCard } from './BlogCard/BlogCard';
 export { default as BackgroundAnimation } from './BackgroundAnimation/BackgroundAnimation';
+export { default as InputField } from './InputField/InputField';
+export { default as TextAreaField } from './TextAreaField/TextAreaField';

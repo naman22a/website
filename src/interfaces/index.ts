@@ -1,3 +1,5 @@
+import { FormikHelpers } from 'formik';
+
 export interface BaseData {
     _id: string;
     _type: string;
@@ -74,3 +76,14 @@ export interface Blog {
     content: string;
     meta: BlogMeta;
 }
+
+export interface ContactFormInfo {
+    name: string;
+    email: string;
+    message: string;
+}
+
+export type HandleSubmit<T> = (
+    values: T,
+    formikHelpers: FormikHelpers<T>
+) => void | Promise<any>;
