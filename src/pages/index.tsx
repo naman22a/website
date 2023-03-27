@@ -1,5 +1,6 @@
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
 import { client } from '@/lib';
 import {
     ContactData,
@@ -9,7 +10,11 @@ import {
     Skill,
     SkillSetData
 } from '@/interfaces';
-import { Contact, Footer, Landing, Projects, SkillSet } from '@/components';
+import { Landing } from '@/components';
+const SkillSet = dynamic(() => import('@/components/SkillSet/SkillSet'));
+const Projects = dynamic(() => import('@/components/Projects/Projects'));
+const Contact = dynamic(() => import('@/components/Contact/Contact'));
+const Footer = dynamic(() => import('@/components/Footer/Footer'));
 
 const Index = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
     const {

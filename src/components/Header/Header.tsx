@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import { images } from '@/constants';
 import Image from 'next/image';
+const Menu = dynamic(() => import('./Menu'));
 
 // Icons
 import { CgMenuRightAlt } from 'react-icons/cg';
@@ -72,45 +74,7 @@ const Header: React.FC = () => {
             </div>
 
             {/* mobile menu */}
-            <nav
-                className={`flex flex-col absolute top-20 bg-ctp-surface0 w-full px-4 py-10 text-white items-center justify-center select-none ${
-                    open ? 'left-0' : 'left-full'
-                } transition-all duration-300 inline-block md:hidden`}
-            >
-                <Link
-                    href="/"
-                    className="my-5 text-lg"
-                    onClick={() => setOpen(false)}
-                >
-                    Home
-                </Link>
-                <Link
-                    href="/blogs"
-                    className="my-5 text-lg"
-                    onClick={() => setOpen(false)}
-                >
-                    Blogs
-                </Link>
-                {router.pathname === '/' && (
-                    <>
-                        <a
-                            href="#projects"
-                            className="my-5 text-lg"
-                            onClick={() => setOpen(false)}
-                        >
-                            Projects
-                        </a>
-
-                        <a
-                            href="#contact"
-                            className="my-5 text-lg"
-                            onClick={() => setOpen(false)}
-                        >
-                            Contact
-                        </a>
-                    </>
-                )}
-            </nav>
+            <Menu open={open} setOpen={setOpen} />
         </header>
     );
 };
