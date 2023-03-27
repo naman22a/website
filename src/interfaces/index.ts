@@ -16,7 +16,7 @@ export interface ImageType {
     };
 }
 
-export interface LandingData {
+export interface LandingData extends BaseData {
     bgText1: string;
     bgText2: string;
     smallText: string;
@@ -26,7 +26,7 @@ export interface LandingData {
     image: ImageType;
 }
 
-export interface SkillSetData {
+export interface SkillSetData extends BaseData {
     smallText: string;
     largeText1: string;
     largeText2: string;
@@ -34,12 +34,13 @@ export interface SkillSetData {
     description: string;
 }
 
-export interface Skill {
-    type: string;
-    level: number;
+export interface Skill extends BaseData {
+    name: string;
+    bgColor: string;
+    icon: ImageType;
 }
 
-export interface Project {
+export interface Project extends BaseData {
     title: string;
     description: string;
     previewLink?: string;
@@ -48,7 +49,7 @@ export interface Project {
     image: ImageType;
 }
 
-export interface ContactData {
+export interface ContactData extends BaseData {
     smallText: string;
     largeText: string;
     description1: string;
@@ -56,7 +57,7 @@ export interface ContactData {
     email: string;
 }
 
-export interface FooterData {
+export interface FooterData extends BaseData {
     name: string;
     twitterUsername: string;
     githubLink: string;
