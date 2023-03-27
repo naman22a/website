@@ -1,8 +1,9 @@
 import React from 'react';
+import Image from 'next/image';
 import { Button } from '@/components';
 import { motion } from 'framer-motion';
 import { Skill, SkillSetData } from '@/interfaces';
-import Skillbar from 'react-skillbars';
+import { urlFor } from '@/lib';
 
 const colors = {
     bar: '#f38ba8',
@@ -16,7 +17,7 @@ interface Props extends SkillSetData {
     skills: Skill[];
 }
 
-const SkillSet: React.FC<Props> = props => {
+const SkillSet: React.FC<Props> = (props) => {
     const {
         smallText,
         largeText1,
@@ -59,14 +60,30 @@ const SkillSet: React.FC<Props> = props => {
                     <p>{description}</p>
                 </motion.div>
             </div>
-            <div className="mb-20 capitalize font-Hack w-full">
-                <Skillbar
-                    skills={skills}
-                    colors={colors}
-                    animationDuration={3000}
-                    animationDelay={0}
-                />
-            </div>
+            <motion.div className="mb-20 w-full flex flex-wrap justify-evenly items-center md:justify-start md:items-start">
+                {skills.map((skill) => (
+                    <motion.div
+                        key={skill._id}
+                        whileInView={{ opacity: [0, 1] }}
+                        transition={{ duration: 0.5 }}
+                        className="flex flex-col text-center m-4 transition-all duration-300 ease-in-out"
+                    >
+                        <div
+                            className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-ctp-crust shadow-lg grid place-items-center hover:-translate-y-2 transition-all duration-200"
+                            style={{ backgroundColor: skill.bgColor }}
+                        >
+                            <Image
+                                src={urlFor(skill.icon).url()}
+                                height={45}
+                                width={45}
+                                alt={skill.name}
+                                className="h-1/2 w-1/2 object-cover"
+                            />
+                        </div>
+                        <p className="text-ctp-text mt-3">{skill.name}</p>
+                    </motion.div>
+                ))}
+            </motion.div>
         </>
     );
 };
