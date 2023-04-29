@@ -51,9 +51,9 @@ const Landing: React.FC<Props> = (props) => {
                     {name}
                     <span className="h-4 w-4 bg-ctp-red inline-block rounded-full ml-1"></span>
                 </motion.h1>
-                <motion.span className="lg:w-2/3 block" variants={item}>
+                <motion.p className="lg:w-2/3" variants={item}>
                     {description}
-                </motion.span>
+                </motion.p>
                 <motion.a
                     href="#mySkillSet"
                     variants={item}
