@@ -21,7 +21,7 @@ const item = {
 
 interface Props extends LandingData {}
 
-const Landing: React.FC<Props> = props => {
+const Landing: React.FC<Props> = (props) => {
     const { bgText1, bgText2, smallText, name, description, buttonText } =
         props;
 
@@ -51,9 +51,9 @@ const Landing: React.FC<Props> = props => {
                     {name}
                     <span className="h-4 w-4 bg-ctp-red inline-block rounded-full ml-1"></span>
                 </motion.h1>
-                <motion.p className="lg:w-2/3" variants={item}>
+                <motion.span className="lg:w-2/3 block" variants={item}>
                     {description}
-                </motion.p>
+                </motion.span>
                 <motion.a
                     href="#mySkillSet"
                     variants={item}
