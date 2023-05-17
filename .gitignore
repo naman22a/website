@@ -40,3 +40,7 @@ next-env.d.ts
 # env files
 .env
 *.env
+
+# site maps
+/public/sitemap-0.xml
+/public/sitemap.xml
