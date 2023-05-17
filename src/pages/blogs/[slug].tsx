@@ -25,7 +25,7 @@ const BlogDetails = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
             <Head>
                 <title>{pageTitle}</title>
             </Head>
-            <h1 className="text-5xl font-semibold mb-4 pb-3 border-b-4 border-b-ctp-mauve inline-block">
+            <h1 className="md:text-5xl text-3xl md:font-semibold font-bold mb-4 md:pb-3 md:border-b-4 md:border-b-ctp-mauve inline-block">
                 {title}
             </h1>
             <p className="mb-2">
