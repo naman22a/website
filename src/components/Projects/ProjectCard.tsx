@@ -1,7 +1,6 @@
 import React from 'react';
 import { Project } from '@/interfaces';
 import { Button } from '@/components';
-import { motion } from 'framer-motion';
 import { urlFor } from '@/lib';
 import Image from 'next/image';
 
@@ -9,18 +8,15 @@ interface Props extends Project {
     index: number;
 }
 
-const ProjectCard: React.FC<Props> = props => {
+const ProjectCard: React.FC<Props> = (props) => {
     const { title, description, githubLink, image, previewLink, index, tags } =
         props;
 
     return (
-        <motion.div
+        <div
             className={`flex flex-col ${
                 index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
             } my-10`}
-            whileInView={{ y: [100, 0], opacity: [0, 1] }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
         >
             <div className="mb-10 lg:w-1/2">
                 <h3 className="text-2xl font-semibold my-3 border-b-4 pb-2 border-b-ctp-red inline-block mb-5 font-Hack tracking-wide">
@@ -67,7 +63,7 @@ const ProjectCard: React.FC<Props> = props => {
                     className="shadow-lg rounded-lg"
                 />
             </div>
-        </motion.div>
+        </div>
     );
 };
 

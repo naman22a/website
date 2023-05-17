@@ -1,17 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import { Button } from '@/components';
-import { motion } from 'framer-motion';
 import { Skill, SkillSetData } from '@/interfaces';
 import { urlFor } from '@/lib';
-
-const colors = {
-    bar: '#f38ba8',
-    title: {
-        text: '#fff',
-        background: '#313244'
-    }
-};
 
 interface Props extends SkillSetData {
     skills: Skill[];
@@ -33,12 +24,7 @@ const SkillSet: React.FC<Props> = (props) => {
                 className="mb-20 flex flex-col lg:flex-row justify-between items-center mt-20 lg:mt-0"
                 id="mySkillSet"
             >
-                <motion.div
-                    className="lg:w-1/2"
-                    whileInView={{ y: [100, 0], opacity: [0, 1] }}
-                    transition={{ duration: 0.5 }}
-                    viewport={{ once: true }}
-                >
+                <div className="lg:w-1/2">
                     <h2 className="uppercase text-ctp-red font-bold mb-6 tracking-wider">
                         {smallText}
                     </h2>
@@ -50,22 +36,15 @@ const SkillSet: React.FC<Props> = (props) => {
                     <a href="#projects">
                         <Button>{buttonText}</Button>
                     </a>
-                </motion.div>
-                <motion.div
-                    className="mt-7 lg:mt-0 lg:w-1/2"
-                    whileInView={{ y: [100, 0], opacity: [0, 1] }}
-                    transition={{ duration: 0.5 }}
-                    viewport={{ once: true }}
-                >
+                </div>
+                <div className="mt-7 lg:mt-0 lg:w-1/2">
                     <p>{description}</p>
-                </motion.div>
+                </div>
             </div>
-            <motion.div className="mb-20 w-full flex flex-wrap justify-evenly items-center md:justify-start md:items-start">
+            <div className="mb-20 w-full flex flex-wrap justify-evenly items-center md:justify-start md:items-start">
                 {skills.map((skill) => (
-                    <motion.div
+                    <div
                         key={skill._id}
-                        whileInView={{ opacity: [0, 1] }}
-                        transition={{ duration: 0.5 }}
                         className="flex flex-col text-center m-4 transition-all duration-300 ease-in-out"
                     >
                         <div
@@ -81,9 +60,9 @@ const SkillSet: React.FC<Props> = (props) => {
                             />
                         </div>
                         <p className="text-ctp-text mt-3">{skill.name}</p>
-                    </motion.div>
+                    </div>
                 ))}
-            </motion.div>
+            </div>
         </>
     );
 };

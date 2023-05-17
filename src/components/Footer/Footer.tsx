@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { FooterData } from '@/interfaces';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -7,16 +6,11 @@ import { images } from '@/constants';
 
 interface Props extends FooterData {}
 
-const Footer: React.FC<Props> = props => {
+const Footer: React.FC<Props> = (props) => {
     const { name, twitterUsername, githubLink, twitterLink, instagramLink } =
         props;
     return (
-        <motion.footer
-            className="text-gray-600 body-font mt-auto w-full"
-            whileInView={{ y: [100, 0], opacity: [0, 1] }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-        >
+        <footer className="text-gray-600 body-font mt-auto w-full">
             <div className="container py-8 flex items-center sm:flex-row flex-col">
                 <Link href="/">
                     <Image
@@ -104,7 +98,7 @@ const Footer: React.FC<Props> = props => {
                     </a>
                 </span>
             </div>
-        </motion.footer>
+        </footer>
     );
 };
 
