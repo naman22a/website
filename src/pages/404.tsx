@@ -16,7 +16,7 @@ const NotFound: NextPage = () => {
                     Opps!
                 </h1>
                 <h2 className="text-3xl text-ctp-green font-semibold mb-7">
-                    We couldn't find that page.
+                    We couldn&apos;t find that page.
                 </h2>
                 <h4 className="text-lg mb-6">
                     Maybe you can find what you need here ?
