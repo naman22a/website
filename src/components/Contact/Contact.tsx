@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { ContactData, ContactFormInfo, HandleSubmit } from '@/interfaces';
 import { Formik, Form } from 'formik';
 import { Button, InputField, TextAreaField } from '@/components';
@@ -89,11 +88,8 @@ const Contact: React.FC<Props> = (props) => {
     };
 
     return (
-        <motion.div
+        <div
             className="my-20 flex flex-col justify-center items-center"
-            whileInView={{ y: [100, 0], opacity: [0, 1] }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
             id="contact"
         >
             <h4 className="uppercase tracking-wider text-ctp-red font-bold text-sm">
@@ -186,7 +182,7 @@ const Contact: React.FC<Props> = (props) => {
                     </div>
                 </div>
             </div>
-        </motion.div>
+        </div>
     );
 };
 

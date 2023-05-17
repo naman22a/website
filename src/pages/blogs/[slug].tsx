@@ -13,7 +13,6 @@ import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
 import { Footer, Tag } from '@/components';
 import { client } from '@/lib';
-import { motion } from 'framer-motion';
 dayjs.extend(customParseFormat);
 
 const BlogDetails = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
@@ -36,18 +35,13 @@ const BlogDetails = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
                 </span>
             </p>
             <div className="mt-4 mb-8">
-                {tags.map(tag => (
+                {tags.map((tag) => (
                     <Tag key={tag} tag={tag} />
                 ))}
             </div>
-            <motion.div
-                className="prose w-full"
-                whileInView={{ y: [100, 0], opacity: [0, 1] }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-            >
+            <div className="prose w-full">
                 <MDXRemote {...source} components={{ Image }} />
-            </motion.div>
+            </div>
             <Footer {...footerData} />
         </>
     );
@@ -88,7 +82,7 @@ export const getStaticProps: GetStaticProps<DataProps> = async ({ params }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = () => {
-    const paths = getSlugs().map(slug => ({ params: { slug } }));
+    const paths = getSlugs().map((slug) => ({ params: { slug } }));
     return { paths, fallback: false };
 };
 
