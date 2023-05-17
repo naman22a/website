@@ -59,27 +59,27 @@
         }
 
         h1 {
-            @apply text-4xl;
+            @apply md:text-4xl text-2xl;
         }
 
         h2 {
-            @apply text-3xl;
+            @apply md:text-3xl text-xl;
         }
 
         h3 {
-            @apply text-2xl;
+            @apply md:text-2xl text-lg;
         }
 
         h4 {
-            @apply text-xl;
+            @apply md:text-xl text-lg;
         }
 
         h5 {
-            @apply text-lg;
+            @apply md:text-lg text-base;
         }
 
         h6 {
-            @apply text-base;
+            @apply md:text-base text-xs;
         }
 
         pre {
