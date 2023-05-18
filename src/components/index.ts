@@ -11,3 +11,4 @@ export { default as BlogCard } from './BlogCard/BlogCard';
 export { default as BackgroundAnimation } from './BackgroundAnimation/BackgroundAnimation';
 export { default as InputField } from './InputField/InputField';
 export { default as TextAreaField } from './TextAreaField/TextAreaField';
+export { default as Pagination } from './Pagination/Pagination';
