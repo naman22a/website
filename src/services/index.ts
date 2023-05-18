@@ -2,13 +2,14 @@ import path from 'path';
 import fs from 'fs';
 import matter from 'gray-matter';
 import { Blog } from '../interfaces';
+import dayjs from 'dayjs';
 
 const BLOGS_PATH = path.join(process.cwd(), 'src/blogs/');
 
 export const getSlugs = (): string[] => {
     const files = fs.readdirSync(BLOGS_PATH, { encoding: 'utf-8' });
 
-    return files.map(file => file.split('.')[0]);
+    return files.map((file) => file.split('.')[0]);
 };
 
 export const getBlogFromSlug = (slug: string): Blog => {
@@ -30,10 +31,22 @@ export const getBlogFromSlug = (slug: string): Blog => {
 
 export const getBlogs = () => {
     const blogs = getSlugs()
-        .map(slug => getBlogFromSlug(slug))
+        .map((slug) => getBlogFromSlug(slug))
         .sort((a, b) => {
-            if (a.meta.date > b.meta.date) return 1;
-            if (a.meta.date < b.meta.date) return -1;
+            if (
+                dayjs(a.meta.date, 'DD-MM-YYYY').isBefore(
+                    dayjs(b.meta.date, 'DD-MM-YYYY')
+                )
+            ) {
+                return -1;
+            }
+            if (
+                dayjs(a.meta.date, 'DD-MM-YYYY').isAfter(
+                    dayjs(b.meta.date, 'DD-MM-YYYY')
+                )
+            ) {
+                return 1;
+            }
             return 0;
         });
     blogs.reverse();
