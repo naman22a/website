@@ -23,6 +23,7 @@ const Pagination: React.FC<Props> = ({
     return (
         <div className="flex justify-center items-center">
             <button
+                aria-label="Previous Page"
                 className={`p-2 rounded-lg bg-ctp-crust text-white mx-2 transition duration-200 border-white border ${
                     currentPage - 1 < 1
                         ? 'cursor-not-allowed bg-gray-800'
@@ -52,6 +53,7 @@ const Pagination: React.FC<Props> = ({
                 </button>
             ))}
             <button
+                aria-label="Next Page"
                 className={`p-2 rounded-lg bg-ctp-crust text-white mx-2 transition duration-200 border-white border ${
                     currentPage === Math.ceil(totalBlogs / blogsPerPage)
                         ? 'cursor-not-allowed bg-gray-800'
