@@ -6,7 +6,7 @@ The website is live on [https://namanarora.vercel.app/](https://namanarora.verce
 
 This website is made using the beautiful 🌈[catppuccin theme](https://github.com/catppuccin).
 
-## 🔥 Performance
+## 🔥 Blazingly Fast Performance
 
 ![performance](./assets/performace.png)
 
