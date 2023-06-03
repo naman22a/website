@@ -54,6 +54,10 @@
             }
         }
 
+        ul {
+            list-style: square;
+        }
+
         p {
             @apply mb-3;
         }
