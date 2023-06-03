@@ -3,6 +3,8 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import { Blog } from '../interfaces';
 import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
+dayjs.extend(relativeTime);
 
 const BLOGS_PATH = path.join(process.cwd(), 'src/blogs/');
 
