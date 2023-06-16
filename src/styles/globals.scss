@@ -22,6 +22,11 @@
         @apply text-ctp-text font-Hack;
     }
 
+    b,
+    strong {
+        @apply font-extrabold text-ctp-mauve;
+    }
+
     // Scroll bar
     ::-webkit-scrollbar {
         width: 10px;
@@ -94,7 +99,8 @@
             }
         }
 
-        a {
+        a,
+        a > {
             @apply text-ctp-sapphire underline inline;
         }
     }
