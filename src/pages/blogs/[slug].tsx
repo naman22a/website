@@ -24,6 +24,8 @@ const BlogDetails = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
         <>
             <Head>
                 <title>{pageTitle}</title>
+                <meta name="description" content={meta.excerpt} />
+                <meta name="keywords" content={tags.join(', ')} />
             </Head>
             <h1 className="md:text-5xl text-3xl md:font-semibold font-bold mb-4 md:pb-3 md:border-b-4 md:border-b-ctp-mauve inline-block">
                 {title}
