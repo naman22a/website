@@ -17,7 +17,7 @@ dayjs.extend(customParseFormat);
 
 const BlogDetails = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
     const { meta, source, footerData } = props;
-    const { title, tags, date } = meta;
+    const { title, tags, date, slug, excerpt } = meta;
     const pageTitle = `${title} | Naman Arora`;
 
     return (
@@ -26,6 +26,18 @@ const BlogDetails = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
                 <title>{pageTitle}</title>
                 <meta name="description" content={meta.excerpt} />
                 <meta name="keywords" content={tags.join(', ')} />
+                <meta property="og:site_name" content="Naman Arora" />
+                <meta property="og:locale" content="en_US" />
+                <meta property="og:type" content="article" />
+                <meta property="og:title" content={title} />
+                <meta property="og:description" content={excerpt} />
+                <meta
+                    property="og:url"
+                    content={`https://namanarora.vercel.app/blogs/${slug}`}
+                />
+                <meta property="og:site_name" content={title} />
+                <meta property="article:published_time" content={meta.date} />
+                <meta name="author" content="Naman Arora" />
             </Head>
             <h1 className="md:text-5xl text-3xl md:font-semibold font-bold mb-4 md:pb-3 md:border-b-4 md:border-b-ctp-mauve inline-block">
                 {title}
