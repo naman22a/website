@@ -10,7 +10,7 @@ const Blogs = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
     const { blogs, footerData } = props;
 
     const [currentPage, setCurrentPage] = useState(1);
-    const [blogsPerPage, setBlogsPerPage] = useState(2);
+    const [blogsPerPage, setBlogsPerPage] = useState(4);
 
     const lastBlogIndex = currentPage * blogsPerPage;
     const firstBlogIndex = lastBlogIndex - blogsPerPage;
@@ -21,18 +21,18 @@ const Blogs = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
             <Head>
                 <title>Blogs | Naman Arora</title>
             </Head>
-            <h1 className="text-4xl font-semibold mb-6">Blogs</h1>
+            <h1 className="text-4xl font-semibold">Blogs</h1>
+            <div>
+                {currentBlogs?.map((blog) => (
+                    <BlogCard key={blog.slug} {...blog} />
+                ))}
+            </div>
             <Pagination
                 totalBlogs={blogs.length}
                 blogsPerPage={blogsPerPage}
                 currentPage={currentPage}
                 setCurrentPage={setCurrentPage}
             />
-            <div>
-                {currentBlogs?.map((blog) => (
-                    <BlogCard key={blog.slug} {...blog} />
-                ))}
-            </div>
             <Footer {...footerData} />
         </>
     );
