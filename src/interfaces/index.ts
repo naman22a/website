@@ -57,12 +57,16 @@ export interface ContactData extends BaseData {
     email: string;
 }
 
-export interface FooterData extends BaseData {
-    name: string;
-    twitterUsername: string;
+export interface Links {
     githubLink: string;
     instagramLink: string;
     twitterLink: string;
+    linkedinLink: string;
+}
+
+export interface FooterData extends BaseData, Links {
+    name: string;
+    twitterUsername: string;
 }
 
 export interface BlogMeta {

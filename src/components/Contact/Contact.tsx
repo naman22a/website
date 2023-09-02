@@ -1,5 +1,10 @@
 import React from 'react';
-import { ContactData, ContactFormInfo, HandleSubmit } from '@/interfaces';
+import {
+    ContactData,
+    ContactFormInfo,
+    HandleSubmit,
+    Links
+} from '@/interfaces';
 import { Formik, Form } from 'formik';
 import { Button, InputField, TextAreaField } from '@/components';
 import emailjs from '@emailjs/browser';
@@ -8,14 +13,10 @@ import toast from 'react-hot-toast';
 import { RiSendPlaneFill } from 'react-icons/ri';
 import { IoLocationSharp } from 'react-icons/io5';
 import { MdMail } from 'react-icons/md';
-import { BsGithub } from 'react-icons/bs';
+import { BsGithub, BsLinkedin } from 'react-icons/bs';
 import { FaTwitter, FaInstagram } from 'react-icons/fa';
 
-interface Props extends ContactData {
-    githubLink: string;
-    instagramLink: string;
-    twitterLink: string;
-}
+interface Props extends ContactData, Links {}
 
 const Contact: React.FC<Props> = (props) => {
     const {
@@ -24,6 +25,7 @@ const Contact: React.FC<Props> = (props) => {
         description1,
         description2,
         email,
+        linkedinLink,
         githubLink,
         instagramLink,
         twitterLink
@@ -155,6 +157,14 @@ const Contact: React.FC<Props> = (props) => {
                         </div>
                     </div>
                     <div className="flex mt-5">
+                        <a
+                            href={linkedinLink}
+                            aria-label="LinkedIn Profile"
+                            target="_blank"
+                            className="p-2 rounded-lg hover:bg-ctp-lavender hover:-translate-y-1 transition-all duration-200 mr-4"
+                        >
+                            <BsLinkedin className="h-7 w-7" />
+                        </a>
                         <a
                             href={githubLink}
                             aria-label="Github Profile"

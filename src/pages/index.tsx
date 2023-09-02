@@ -38,6 +38,7 @@ const Index = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
                 githubLink={footerData.githubLink}
                 instagramLink={footerData.instagramLink}
                 twitterLink={footerData.twitterLink}
+                linkedinLink={footerData.linkedinLink}
             />
             <Footer {...footerData} />
         </>

@@ -3,14 +3,20 @@ import { FooterData } from '@/interfaces';
 import Link from 'next/link';
 import Image from 'next/image';
 import { images } from '@/constants';
-import { BsGithub } from 'react-icons/bs';
+import { BsGithub, BsLinkedin } from 'react-icons/bs';
 import { FaInstagram, FaTwitter } from 'react-icons/fa';
 
 interface Props extends FooterData {}
 
 const Footer: React.FC<Props> = (props) => {
-    const { name, twitterUsername, githubLink, twitterLink, instagramLink } =
-        props;
+    const {
+        name,
+        twitterUsername,
+        githubLink,
+        twitterLink,
+        instagramLink,
+        linkedinLink
+    } = props;
     return (
         <footer className="text-gray-600 body-font mt-auto w-full">
             <div className="container py-8 flex items-center sm:flex-row flex-col">
@@ -33,9 +39,18 @@ const Footer: React.FC<Props> = (props) => {
                         {twitterUsername}
                     </a>
                 </p>
-                <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start items-center">
+                <span className="inline-flex gap-4 sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start items-center">
                     <a
-                        className="ml-3 text-gray-500 cursor-pointer hover:text-ctp-red group"
+                        className="text-gray-500 cursor-pointer hover:text-ctp-red group"
+                        href={linkedinLink}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        aria-label="LinkedIn link"
+                    >
+                        <BsLinkedin className="h-7 w-7" />
+                    </a>
+                    <a
+                        className="text-gray-500 cursor-pointer hover:text-ctp-red group"
                         href={githubLink}
                         rel="noopener noreferrer"
                         target="_blank"
@@ -44,7 +59,7 @@ const Footer: React.FC<Props> = (props) => {
                         <BsGithub className="h-7 w-7" />
                     </a>
                     <a
-                        className="ml-3 text-gray-500 cursor-pointer hover:text-ctp-red group"
+                        className="text-gray-500 cursor-pointer hover:text-ctp-red group"
                         href={twitterLink}
                         rel="noopener noreferrer"
                         target="_blank"
@@ -53,7 +68,7 @@ const Footer: React.FC<Props> = (props) => {
                         <FaTwitter className="h-7 w-7" />
                     </a>
                     <a
-                        className="ml-3 text-gray-500 cursor-pointer hover:text-ctp-red group"
+                        className="text-gray-500 cursor-pointer hover:text-ctp-red group"
                         href={instagramLink}
                         rel="noopener noreferrer"
                         target="_blank"
