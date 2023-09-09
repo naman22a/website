@@ -86,12 +86,6 @@ export default function App({ Component, pageProps }: AppProps) {
 
                     {/* Favicon */}
                     <link rel="icon" href="/favicon.png" />
-
-                    {/* Google search console */}
-                    <meta
-                        name="google-site-verification"
-                        content="f1xJCJmDE2FV3kTuVZ5ETtGLOspPpCivXtIRv5HK30Y"
-                    />
                 </Head>
             </Head>
             <Layout>
