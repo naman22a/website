@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://namanarora.vercel.app
-
-# Sitemaps
-Sitemap: https://namanarora.vercel.app/sitemap.xml
