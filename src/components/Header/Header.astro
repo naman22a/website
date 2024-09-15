@@ -1,0 +1,26 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../../assets/logo.svg';
+import Navbar from './Navbar';
+import Hamburger from './Hamburger';
+import MobileMenu from './MobileMenu';
+---
+
+<header
+    class="flex items-center px-10 md:px-20 fixed h-20 md:h-24 w-full top-0 z-10
+    bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 rounded-xl shadow bg-ctp-crust"
+>
+    <a href="/">
+        <Image
+            src={logo}
+            alt="Naman Arora"
+            height={100}
+            width={100}
+            class="h-20 w-20 object-cover"
+        />
+    </a>
+
+    <Navbar client:only="solid-js" />
+    <Hamburger client:only="solid-js" />
+    <MobileMenu client:only="solid-js" />
+</header>
