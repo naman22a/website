@@ -1,0 +1,14 @@
+{
+    "smallText": "my skillset",
+    "largeText1": "Full Stack Developer",
+    "largeText2": "Linux Enthusiast",
+    "buttonText": "my projects",
+    "description": "I am a full stack developer and UI/UX designer. I have experience with a wide range of technologies and tools, including HTML, CSS, JavaScript, React, Next js,Node.js, Express, MongoDB, Redis,MySQL and PostgresSQL. I am also experienced in design tools such as Figma, GIMP and Inkscape. I am a quick learner and have a strong attention to detail. I am a motivated self-starter who is always looking for new challenges.",
+    "skills": [
+        {
+            "name": "typescript",
+            "icon": "typescript.webp",
+            "href": "https://www.typescriptlang.org"
+        }
+    ]
+}

@@ -1,0 +1,65 @@
+---
+import { getEntry } from 'astro:content';
+import Button from '../shared/Button';
+import { Image } from 'astro:assets';
+
+const data = (await getEntry('skillset', 'skillset')).data;
+const { smallText, largeText1, largeText2, buttonText, description, skills } =
+    data;
+---
+
+<div
+    class="mb-20 flex flex-col lg:flex-row justify-between items-center mt-20 lg:mt-0"
+    id="mySkillSet"
+>
+    <div class="lg:w-1/2">
+        <h2 class="uppercase text-ctp-red font-bold mb-6 tracking-wider">
+            {smallText}
+        </h2>
+        <h3
+            class="flex flex-row md:flex-col lg:flex-col font-bold capitalize text-3xl"
+        >
+            <span>
+                {largeText1}
+            </span>
+            <span class="block mr-3">&</span>
+            <span>
+                {largeText2}
+            </span>
+        </h3>
+        <a href="#projects">
+            <Button>
+                {buttonText}
+            </Button>
+        </a>
+    </div>
+    <div class="mt-7 lg:mt-0 lg:w-1/2">
+        <p>
+            {description}
+        </p>
+    </div>
+</div>
+<div
+    class="mb-20 w-full flex flex-wrap justify-evenly items-center md:justify-start md:items-start"
+>
+    {
+        skills.map((skill) => (
+            <a
+                href={skill.href}
+                target="_blank"
+                class="flex flex-col text-center m-4 transition-all duration-300 ease-in-out"
+            >
+                <div class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-ctp-crust shadow-lg grid place-items-center hover:-translate-y-2 transition-all duration-200">
+                    <Image
+                        src={`/skills/${skill.icon}`}
+                        height={45}
+                        width={45}
+                        alt={skill.name}
+                        class="h-1/2 w-1/2 object-cover"
+                    />
+                </div>
+                <p class="text-ctp-text mt-3">{skill.name}</p>
+            </a>
+        ))
+    }
+</div>
