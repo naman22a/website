@@ -30,4 +30,20 @@ const skillset = defineCollection({
     })
 });
 
-export const collections = { landing, skillset };
+const projectSchema = z.object({
+    title: z.string(),
+    description: z.string(),
+    previewLink: z.string().optional(),
+    githubLink: z.string(),
+    image: z.string(),
+    tags: z.array(z.string())
+});
+
+const projects = defineCollection({
+    type: 'data',
+    schema: z.object({ projects: z.array(projectSchema) })
+});
+
+export type ProjectSchemaType = z.infer<typeof projectSchema>;
+
+export const collections = { landing, skillset, projects };

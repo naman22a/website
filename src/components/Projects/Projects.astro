@@ -1,0 +1,22 @@
+---
+import { getEntry } from 'astro:content';
+import ProjectCard from './ProjectCard.astro';
+
+const projects = (await getEntry('projects', 'projects')).data.projects;
+---
+
+<div class="flex flex-col justify-center items-center" id="projects">
+    <h2 class="font-bold text-3xl mb-10 font-Hack text-ctp-red">
+        &lt;
+        <span class="text-ctp-text mx-1">Projects</span>
+        /&gt;
+    </h2>
+
+    <div class="flex flex-col justify-center items-center">
+        {
+            projects.map((project, index) => (
+                <ProjectCard {...project} index={index} />
+            ))
+        }
+    </div>
+</div>
