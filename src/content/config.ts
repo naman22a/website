@@ -38,12 +38,26 @@ const projectSchema = z.object({
     image: z.string(),
     tags: z.array(z.string())
 });
+export type ProjectSchemaType = z.infer<typeof projectSchema>;
 
 const projects = defineCollection({
     type: 'data',
     schema: z.object({ projects: z.array(projectSchema) })
 });
 
-export type ProjectSchemaType = z.infer<typeof projectSchema>;
+const contact = defineCollection({
+    type: 'data',
+    schema: z.object({
+        smallText: z.string(),
+        largeText: z.string(),
+        description1: z.string(),
+        description2: z.string(),
+        email: z.string(),
+        githubLink: z.string(),
+        instagramLink: z.string(),
+        twitterLink: z.string(),
+        linkedinLink: z.string()
+    })
+});
 
-export const collections = { landing, skillset, projects };
+export const collections = { landing, skillset, projects, contact };

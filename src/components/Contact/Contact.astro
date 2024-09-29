@@ -1,0 +1,8 @@
+---
+import { getEntry } from 'astro:content';
+import ContactForm from './ContactForm.tsx';
+
+const data = (await getEntry('contact', 'contact')).data;
+---
+
+<ContactForm client:only="solid-js" {...data} />
