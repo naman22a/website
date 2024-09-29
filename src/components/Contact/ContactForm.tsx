@@ -10,6 +10,8 @@ import TextArea from './TextArea';
 import type { ContactFormValues } from '../../interfaces';
 import { RiBusinessSendPlaneFill } from 'solid-icons/ri';
 import Button from '../shared/Button';
+import emailjs from '@emailjs/browser';
+import toast, { Toaster } from 'solid-toast';
 
 interface Props {
     smallText: string;
@@ -74,7 +76,60 @@ const Contact: Component<Props> = ({
                             (async (
                                 form: Store<FormType.Context<ContactFormValues>>
                             ) => {
-                                console.log(form.values);
+                                const { name, email, message } = form.values;
+
+                                try {
+                                    const res = await emailjs.send(
+                                        import.meta.env
+                                            .PUBLIC_EMAILJS_SERVICE_ID,
+                                        import.meta.env
+                                            .PUBLIC_EMAILJS_TEMPLATE_ID,
+                                        {
+                                            name,
+                                            email,
+                                            message
+                                        },
+                                        import.meta.env
+                                            .PUBLIC_EMAILJS_PUBLIC_KEY
+                                    );
+                                    if (res.status === 200) {
+                                        toast.success(
+                                            'Thank you. I will get back to you as soon as possible.',
+                                            {
+                                                position: 'top-center',
+                                                style: {
+                                                    'background-color':
+                                                        '#1e1e2e',
+                                                    color: '#cdd6f4',
+                                                    'text-align': 'center'
+                                                }
+                                            }
+                                        );
+                                    } else {
+                                        toast.error(
+                                            'Opps! Something went wrong.',
+                                            {
+                                                position: 'top-center',
+                                                style: {
+                                                    'background-color':
+                                                        '#1e1e2e',
+                                                    color: '#cdd6f4',
+                                                    'text-align': 'center'
+                                                }
+                                            }
+                                        );
+                                    }
+                                } catch (error) {
+                                    console.error(error);
+                                    toast.error('Opps! Something went wrong.', {
+                                        position: 'top-center',
+                                        style: {
+                                            'background-color': '#1e1e2e',
+                                            color: '#cdd6f4',
+                                            'text-align': 'center'
+                                        }
+                                    });
+                                }
                             }) as any
                         }
                     >
@@ -161,6 +216,8 @@ const Contact: Component<Props> = ({
                     </div>
                 </div>
             </div>
+
+            <Toaster />
         </div>
     );
 };
