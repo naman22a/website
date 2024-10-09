@@ -1,0 +1,37 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../../assets/logo.svg';
+import { getEntry } from 'astro:content';
+import Icons from './Icons';
+import DateComponent from './Date';
+
+const data = (await getEntry('contact', 'contact')).data;
+---
+
+<footer class="text-gray-600 body-font mt-auto w-full px-10 md:px-20">
+    <div class="container py-8 flex items-center sm:flex-row flex-col">
+        <a href="/">
+            <Image
+                src={logo}
+                alt="Naman Arora"
+                class="h-16 w-16 object-cover"
+            />
+        </a>
+        <p
+            class="text-sm sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4 font-Hack"
+        >
+            <DateComponent client:only="solid-js" />
+            Naman Arora
+            <span class="hidden md:inline-block">—</span>
+            <a
+                href="https://twitter.com/namanarora1022"
+                class="ml-1 hover:text-ctp-red font-semibold hidden md:inline-block"
+                rel="noopener noreferrer"
+                target="_blank"
+            >
+                naman22a
+            </a>
+        </p>
+        <Icons {...data} />
+    </div>
+</footer>
