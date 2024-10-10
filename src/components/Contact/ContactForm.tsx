@@ -89,8 +89,13 @@ const Contact: Component<Props> = ({
                                             email,
                                             message
                                         },
-                                        import.meta.env
-                                            .PUBLIC_EMAILJS_PUBLIC_KEY
+                                        {
+                                            limitRate: {
+                                                throttle: 10000 // 10 secs
+                                            },
+                                            publicKey: import.meta.env
+                                                .PUBLIC_EMAILJS_PUBLIC_KEY
+                                        }
                                     );
                                     if (res.status === 200) {
                                         toast.success(
