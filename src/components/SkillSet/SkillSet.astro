@@ -55,10 +55,10 @@ const { smallText, largeText1, largeText2, buttonText, description, skills } =
                         height={45}
                         width={45}
                         alt={`This language is ${skill.name}`}
-                        class="h-1/2 w-1/2 object-cover"
+                        class="h-1/2 w-1/2 object-contain"
                     />
                 </div>
-                <p class="text-ctp-text mt-3">{skill.name}</p>
+                <p class="text-ctp-text mt-3 capitalize">{skill.name}</p>
             </a>
         ))
     }

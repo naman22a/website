@@ -9,6 +9,81 @@
             "name": "typescript",
             "icon": "typescript.webp",
             "href": "https://www.typescriptlang.org"
+        },
+        {
+            "name": "react",
+            "icon": "react.png",
+            "href": "https://react.dev"
+        },
+        {
+            "name": "git",
+            "icon": "git.png",
+            "href": "https://git-scm.com"
+        },
+        {
+            "name": "GraphQL",
+            "icon": "graphql.png",
+            "href": "https://graphql.org"
+        },
+        {
+            "name": "tailwind",
+            "icon": "tailwind.webp",
+            "href": "https://tailwindcss.com"
+        },
+        {
+            "name": "sass",
+            "icon": "sass.png",
+            "href": "https://sass-lang.com"
+        },
+        {
+            "name": "React Query",
+            "icon": "react-query.png",
+            "href": "https://tanstack.com/query/v3"
+        },
+        {
+            "name": "zustand",
+            "icon": "zustand.png",
+            "href": "https://zustand-demo.pmnd.rs"
+        },
+        {
+            "name": "figma",
+            "icon": "figma.png",
+            "href": "https://www.figma.com"
+        },
+        {
+            "name": "NodeJS",
+            "icon": "nodejs.png",
+            "href": "https://nodejs.org"
+        },
+        {
+            "name": "Nest JS",
+            "icon": "nestjs.png",
+            "href": "https://nestjs.com"
+        },
+        {
+            "name": "PostgreSQL",
+            "icon": "postgres.png",
+            "href": "https://www.postgresql.org"
+        },
+        {
+            "name": "prisma",
+            "icon": "prisma.png",
+            "href": "https://www.prisma.io"
+        },
+        {
+            "name": "JWT",
+            "icon": "jwt.png",
+            "href": "https://jwt.io"
+        },
+        {
+            "name": "mongoDB",
+            "icon": "mongodb.png",
+            "href": "https://www.mongodb.com"
+        },
+        {
+            "name": "redis",
+            "icon": "redis.png",
+            "href": "https://redis.io"
         }
     ]
 }
