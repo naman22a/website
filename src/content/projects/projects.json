@@ -16,6 +16,38 @@
                 "Prisma",
                 "PostgreSQL"
             ]
+        },
+        {
+            "title": "Graphing Calculator for Complex Functions",
+            "description": "I've been working on a tool designed to make graphing and analyzing complex functions easier and more intuitive. This advanced graphing calculator features vector fields for detailed function analysis and domain coloring to visualize complex functions in a unique way.",
+            "previewLink": "https://vector-fields.vercel.app",
+            "githubLink": "https://github.com/naman22a/graphing-calculator",
+            "image": "vector-fields.png",
+            "tags": [
+                "React JS",
+                "Typescript",
+                "p5.js",
+                "Zustand",
+                "Sass",
+                "Vector Fields",
+                "Polya Vector Field"
+            ]
+        },
+        {
+            "title": "Ecommerce Website",
+            "description": "This is a fully functional ecommerce webiste made with next js , nest js and sanity.Users can login and register.There is functionality for forgot password and confirmation of user email.Users can add products to cart, remove them from cart and change the quantity of items.Users can purchase items via stripe checkout feature.",
+            "previewLink": "https://www.linkedin.com/posts/naman22a_ecommerce-webdevelopment-nextjs-activity-7211982662364725248-mLKE",
+            "githubLink": "https://github.com/naman22a/ecommerce",
+            "image": "ecommerce.png",
+            "tags": [
+                "Next JS",
+                "Typescript",
+                "React Query",
+                "Mantine",
+                "Nest JS",
+                "Prisma",
+                "Sanity"
+            ]
         }
     ]
 }
