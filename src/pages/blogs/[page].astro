@@ -1,8 +1,18 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
-const blogs = await getCollection('blogs');
-blogs.reverse();
+import type { GetStaticPathsOptions } from 'astro';
+import Pagination from '../../components/Pagination/Pagination.tsx';
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+    const blogs = await getCollection('blogs');
+    blogs.reverse();
+
+    return paginate(blogs, { pageSize: 4 });
+}
+
+const { page } = Astro.props;
+const blogs = page.data;
 ---
 
 <Layout title="Blogs">
@@ -29,4 +39,5 @@ blogs.reverse();
             </div>
         ))
     }
+    <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
 </Layout>

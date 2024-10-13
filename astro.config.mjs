@@ -16,5 +16,8 @@ export default defineConfig({
             rehypeSlug,
             [rehypeAutolinkHeadings, { behavior: 'wrap' }]
         ]
+    },
+    redirects: {
+        '/blogs': '/blogs/1'
     }
 });
