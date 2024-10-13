@@ -85,7 +85,7 @@
         }
 
         pre {
-            @apply my-7 bg-ctp-crust;
+            @apply my-7 bg-ctp-crust p-5 rounded-sm;
 
             code {
                 @apply whitespace-pre;

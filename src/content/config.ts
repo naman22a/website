@@ -60,4 +60,14 @@ const contact = defineCollection({
     })
 });
 
-export const collections = { landing, skillset, projects, contact };
+const blogs = defineCollection({
+    type: 'content',
+    schema: z.object({
+        title: z.string(),
+        tags: z.array(z.string()),
+        date: z.string(),
+        excerpt: z.string()
+    })
+});
+
+export const collections = { landing, skillset, projects, contact, blogs };
