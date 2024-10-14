@@ -84,6 +84,11 @@
             "name": "redis",
             "icon": "redis.png",
             "href": "https://redis.io"
+        },
+        {
+            "name": "docker",
+            "icon": "docker.webp",
+            "href": "https://www.docker.com"
         }
     ]
 }
