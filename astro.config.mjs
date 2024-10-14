@@ -7,6 +7,7 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import vercel from '@astrojs/vercel/serverless';
 
 export default defineConfig({
+    output: 'hybrid',
     server: { port: 3000 },
     integrations: [tailwind(), solidJs({ devtools: true })],
     markdown: {
