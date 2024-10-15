@@ -1,6 +1,6 @@
 # 🌐 My Personal Website
 
-The website is live on [https://namanarora.vercel.app/](https://namanarora.vercel.app/)
+The website is live on [https://namanarora.xyz](https://namanarora.xyz)
 
 ![website](./assets/web.png)
 
