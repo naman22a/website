@@ -65,7 +65,7 @@ const Contact: Component<Props> = ({
                                     .required('Name is required.'),
                                 email: yup
                                     .string()
-                                    .required()
+                                    .required('Email is required.')
                                     .email('Invalid Email.'),
                                 message: yup
                                     .string()
@@ -166,7 +166,7 @@ const Contact: Component<Props> = ({
                 <div class="md:w-1/2 flex flex-col pt-12">
                     <p class="">
                         {description1}{' '}
-                        <span class="font-bold text-ctp-red">{email}</span>{' '}
+                        <span class="font-bold text-ctp-sapphire">{email}</span>{' '}
                         {description2}
                     </p>
                     <div class="font-JetBrains mt-7">
