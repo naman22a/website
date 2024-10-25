@@ -9,7 +9,6 @@ export async function getStaticPaths() {
 
     let arr = blogs.map((e) => e.data.tags);
     const tags = [...new Set(arr.flat())];
-    console.log(tags);
 
     return tags.map((tag) => ({
         params: { tag }
