@@ -94,7 +94,10 @@ const Contact: Component<Props> = ({
                                                 throttle: 10000 // 10 secs
                                             },
                                             publicKey: import.meta.env
-                                                .PUBLIC_EMAILJS_PUBLIC_KEY
+                                                .PUBLIC_EMAILJS_PUBLIC_KEY,
+                                            // @ts-ignore
+                                            'g-recaptcha-response': import.meta
+                                                .env.PUBLIC_RECAPTCHA_SITE_KEY
                                         }
                                     );
                                     if (res.status === 200) {
@@ -155,6 +158,12 @@ const Contact: Component<Props> = ({
                             label="Message"
                             placeholder="What's you want to say ?"
                         />
+                        <div
+                            class="g-recaptcha"
+                            data-sitekey={
+                                import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY
+                            }
+                        ></div>
                         <Button type="submit">
                             <div class="flex items-center">
                                 <RiBusinessSendPlaneFill class="mr-3 h-6 w-6" />
