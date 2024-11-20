@@ -3,7 +3,6 @@ import { IoLocationSharp, IoMail } from 'solid-icons/io';
 import { BsGithub, BsLinkedin } from 'solid-icons/bs';
 import { FaBrandsInstagram, FaBrandsTwitter } from 'solid-icons/fa';
 import { Form, type FormType } from 'solid-js-form';
-import * as yup from 'yup';
 import type { Store } from 'solid-js/store';
 import Input from './Input';
 import TextArea from './TextArea';
@@ -12,6 +11,7 @@ import { RiBusinessSendPlaneFill } from 'solid-icons/ri';
 import Button from '../shared/Button';
 import emailjs from '@emailjs/browser';
 import toast, { Toaster } from 'solid-toast';
+import { isEmail } from '../../utils';
 
 interface Props {
     smallText: string;
@@ -58,20 +58,6 @@ const Contact: Component<Props> = ({
                                 message: ''
                             } satisfies ContactFormValues
                         }
-                        validation={
-                            {
-                                name: yup
-                                    .string()
-                                    .required('Name is required.'),
-                                email: yup
-                                    .string()
-                                    .required('Email is required.')
-                                    .email('Invalid Email.'),
-                                message: yup
-                                    .string()
-                                    .required('Message is required.')
-                            } as any
-                        }
                         onSubmit={
                             (async (
                                 form: Store<FormType.Context<ContactFormValues>>
@@ -79,6 +65,39 @@ const Contact: Component<Props> = ({
                                 const { name, email, message } = form.values;
 
                                 try {
+                                    // validation
+                                    if (!name) {
+                                        form.setError(
+                                            'name',
+                                            'Name is required.'
+                                        );
+                                        return;
+                                    }
+
+                                    if (!email) {
+                                        form.setError(
+                                            'email',
+                                            'Email is required.'
+                                        );
+                                        return;
+                                    }
+
+                                    if (!message) {
+                                        form.setError(
+                                            'message',
+                                            'Message is required.'
+                                        );
+                                        return;
+                                    }
+
+                                    if (!isEmail(email)) {
+                                        form.setError(
+                                            'email',
+                                            'Invalid email.'
+                                        );
+                                        return;
+                                    }
+
                                     const res = await emailjs.send(
                                         import.meta.env
                                             .PUBLIC_EMAILJS_SERVICE_ID,
