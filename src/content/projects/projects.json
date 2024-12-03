@@ -20,9 +20,9 @@
         {
             "title": "Graphing Calculator for Complex Functions",
             "description": "I've been working on a tool designed to make graphing and analyzing complex functions easier and more intuitive. This advanced graphing calculator features vector fields for detailed function analysis and domain coloring to visualize complex functions in a unique way.",
-            "previewLink": "https://vector-fields.vercel.app",
+            "previewLink": "https://vector-fields.namanarora.xyz",
             "githubLink": "https://github.com/naman22a/graphing-calculator",
-            "image": "vector-fields.png",
+            "image": "flow-field.png",
             "tags": [
                 "React JS",
                 "Typescript",
