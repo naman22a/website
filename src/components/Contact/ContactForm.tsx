@@ -190,7 +190,7 @@ const Contact: Component<Props> = ({
                                         'outline-1 outline-red-600'
                                 )}
                                 name="message"
-                                placeholder="What's "
+                                placeholder="What's your message ?"
                                 value={message()}
                                 onChange={(e) => setMessage(e.target.value)}
                                 rows={7}
