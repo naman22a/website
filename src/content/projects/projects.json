@@ -48,6 +48,22 @@
                 "Prisma",
                 "Sanity"
             ]
+        },
+        {
+            "title": "Heart Disease Classification",
+            "description": "This project aims to predict the likelihood of heart disease in individuals based on their medical and demographic data. By leveraging Logistic Regression, a popular statistical model for binary classification, the project classifies individuals into two categories: those likely to have heart disease and those who are not.",
+            "previewLink": "https://drive.google.com/file/d/1fMD92FOQjOpR5Gtt7edIOMinyAbt-Xa_/view?usp=sharing",
+            "githubLink": "https://github.com/naman22a/heart-disease-classification",
+            "image": "heart-disease.png",
+            "tags": [
+                "Python",
+                "Flask",
+                "Numpy",
+                "Pandas",
+                "Matplotlib",
+                "Seaborn",
+                "Scikit-Learn"
+            ]
         }
     ]
 }
