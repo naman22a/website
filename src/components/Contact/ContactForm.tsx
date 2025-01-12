@@ -3,6 +3,7 @@ import { IoLocationSharp, IoMail } from 'solid-icons/io';
 import { BsGithub, BsLinkedin } from 'solid-icons/bs';
 import { FaBrandsInstagram, FaBrandsTwitter } from 'solid-icons/fa';
 import { RiBusinessSendPlaneFill } from 'solid-icons/ri';
+import { SiLeetcode } from 'solid-icons/si';
 import Button from '../shared/Button';
 import emailjs from '@emailjs/browser';
 import toast, { Toaster } from 'solid-toast';
@@ -20,6 +21,7 @@ interface Props {
     instagramLink: string;
     twitterLink: string;
     linkedinLink: string;
+    leetcodeLink: string;
 }
 
 const Contact: Component<Props> = ({
@@ -31,7 +33,8 @@ const Contact: Component<Props> = ({
     githubLink,
     instagramLink,
     twitterLink,
-    linkedinLink
+    linkedinLink,
+    leetcodeLink
 }) => {
     const [name, setName] = createSignal('');
     const [nameError, setNameError] = createSignal('');
@@ -249,6 +252,14 @@ const Contact: Component<Props> = ({
                             class="p-2 rounded-lg hover:bg-ctp-lavender hover:-translate-y-1 transition-all duration-200 mr-4"
                         >
                             <BsGithub class="h-7 w-7" />
+                        </a>
+                        <a
+                            href={leetcodeLink}
+                            aria-label="Leetcode Profile"
+                            target="_blank"
+                            class="p-2 rounded-lg hover:bg-ctp-lavender hover:-translate-y-1 transition-all duration-200 mr-4"
+                        >
+                            <SiLeetcode class="h-7 w-7" />
                         </a>
                         <a
                             href={twitterLink}

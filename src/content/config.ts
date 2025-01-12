@@ -56,7 +56,8 @@ const contact = defineCollection({
         githubLink: z.string(),
         instagramLink: z.string(),
         twitterLink: z.string(),
-        linkedinLink: z.string()
+        linkedinLink: z.string(),
+        leetcodeLink: z.string()
     })
 });
 
