@@ -89,6 +89,31 @@
             "name": "docker",
             "icon": "docker.webp",
             "href": "https://www.docker.com"
+        },
+        {
+            "name": "Numpy",
+            "icon": "numpy.svg",
+            "href": "https://numpy.org"
+        },
+        {
+            "name": "Pandas",
+            "icon": "pandas.png",
+            "href": "https://pandas.pydata.org"
+        },
+        {
+            "name": "Matplotlib",
+            "icon": "matplotlib.png",
+            "href": "https://matplotlib.org"
+        },
+        {
+            "name": "Scikit-Learn",
+            "icon": "sklearn.png",
+            "href": "https://scikit-learn.org/stable"
+        },
+        {
+            "name": "TensorFlow",
+            "icon": "tf.png",
+            "href": "https://www.tensorflow.org"
         }
     ]
 }
