@@ -34,35 +34,20 @@
             ]
         },
         {
-            "title": "Ecommerce Website",
-            "description": "This is a fully functional ecommerce webiste made with next js , nest js and sanity.Users can login and register.There is functionality for forgot password and confirmation of user email.Users can add products to cart, remove them from cart and change the quantity of items.Users can purchase items via stripe checkout feature.",
-            "previewLink": "https://www.linkedin.com/posts/naman22a_ecommerce-webdevelopment-nextjs-activity-7211982662364725248-mLKE",
-            "githubLink": "https://github.com/naman22a/ecommerce",
-            "image": "ecommerce.png",
+            "title": "Leetcode",
+            "description": "LeetCode clone is a coding challenge platform that helps developers practice problem-solving and prepare for technical interviews. It features an interactive editor, test case evaluation, secure code execution in Docker.",
+            "previewLink": "https://www.linkedin.com/posts/naman22a_typescript-docker-coding-activity-7299674849549897728-KrcJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD-DmuUBFurn9iPjgOzPd9a_Mh3OLgIBlJs",
+            "githubLink": "https://github.com/naman22a/leetcode",
+            "image": "leetcode.png",
             "tags": [
-                "Next JS",
+                "React",
                 "Typescript",
+                "Shadcn UI",
                 "React Query",
-                "Mantine",
                 "Nest JS",
+                "Docker",
                 "Prisma",
-                "Sanity"
-            ]
-        },
-        {
-            "title": "Heart Disease Classification",
-            "description": "This project aims to predict the likelihood of heart disease in individuals based on their medical and demographic data. By leveraging Logistic Regression, a popular statistical model for binary classification, the project classifies individuals into two categories: those likely to have heart disease and those who are not.",
-            "previewLink": "https://drive.google.com/file/d/1fMD92FOQjOpR5Gtt7edIOMinyAbt-Xa_/view?usp=sharing",
-            "githubLink": "https://github.com/naman22a/heart-disease-classification",
-            "image": "heart-disease.png",
-            "tags": [
-                "Python",
-                "Flask",
-                "Numpy",
-                "Pandas",
-                "Matplotlib",
-                "Seaborn",
-                "Scikit-Learn"
+                "PostgreSQL"
             ]
         }
     ]

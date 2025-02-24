@@ -1,0 +1,36 @@
+{
+    "projects": [
+        {
+            "title": "Ecommerce Website",
+            "description": "This is a fully functional ecommerce webiste made with next js , nest js and sanity.Users can login and register.There is functionality for forgot password and confirmation of user email.Users can add products to cart, remove them from cart and change the quantity of items.Users can purchase items via stripe checkout feature.",
+            "previewLink": "https://www.linkedin.com/posts/naman22a_ecommerce-webdevelopment-nextjs-activity-7211982662364725248-mLKE",
+            "githubLink": "https://github.com/naman22a/ecommerce",
+            "image": "ecommerce.png",
+            "tags": [
+                "Next JS",
+                "Typescript",
+                "React Query",
+                "Mantine",
+                "Nest JS",
+                "Prisma",
+                "Sanity"
+            ]
+        },
+        {
+            "title": "Heart Disease Classification",
+            "description": "This project aims to predict the likelihood of heart disease in individuals based on their medical and demographic data. By leveraging Logistic Regression, a popular statistical model for binary classification, the project classifies individuals into two categories: those likely to have heart disease and those who are not.",
+            "previewLink": "https://drive.google.com/file/d/1fMD92FOQjOpR5Gtt7edIOMinyAbt-Xa_/view?usp=sharing",
+            "githubLink": "https://github.com/naman22a/heart-disease-classification",
+            "image": "heart-disease.png",
+            "tags": [
+                "Python",
+                "Flask",
+                "Numpy",
+                "Pandas",
+                "Matplotlib",
+                "Seaborn",
+                "Scikit-Learn"
+            ]
+        }
+    ]
+}
