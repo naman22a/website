@@ -1,18 +1,18 @@
 {
     "projects": [
         {
-            "title": "CsTimer - Rubik's Cube Timer",
-            "description": "This web app is a clone of a rubik's cube timer app with full auth features such as reset password and confirmation email.It is a highly interactive web app with lots of features such as scrambles for different puzzle types 3x3,2x2,4x4 up to 7x7.It also has charts to show your progess of your solve times.",
-            "previewLink": "https://www.linkedin.com/posts/naman22a_rubikscube-speedcubing-cstimer-activity-7192208523940749312-o5ed?utm_source=share&utm_medium=member_desktop",
-            "githubLink": "https://github.com/naman22a/cstimer",
-            "image": "cstimer.png",
+            "title": "Leetcode",
+            "description": "LeetCode clone is a coding challenge platform that helps developers practice problem-solving and prepare for technical interviews. It features an interactive editor, test case evaluation, secure code execution in Docker.",
+            "previewLink": "https://www.linkedin.com/posts/naman22a_typescript-docker-coding-activity-7299674849549897728-KrcJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD-DmuUBFurn9iPjgOzPd9a_Mh3OLgIBlJs",
+            "githubLink": "https://github.com/naman22a/leetcode",
+            "image": "leetcode.png",
             "tags": [
-                "Next JS",
-                "React Query",
-                "Tailwind",
-                "Zustand",
+                "React",
                 "Typescript",
+                "Shadcn UI",
+                "React Query",
                 "Nest JS",
+                "Docker",
                 "Prisma",
                 "PostgreSQL"
             ]
@@ -34,18 +34,18 @@
             ]
         },
         {
-            "title": "Leetcode",
-            "description": "LeetCode clone is a coding challenge platform that helps developers practice problem-solving and prepare for technical interviews. It features an interactive editor, test case evaluation, secure code execution in Docker.",
-            "previewLink": "https://www.linkedin.com/posts/naman22a_typescript-docker-coding-activity-7299674849549897728-KrcJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD-DmuUBFurn9iPjgOzPd9a_Mh3OLgIBlJs",
-            "githubLink": "https://github.com/naman22a/leetcode",
-            "image": "leetcode.png",
+            "title": "CsTimer - Rubik's Cube Timer",
+            "description": "This web app is a clone of a rubik's cube timer app with full auth features such as reset password and confirmation email.It is a highly interactive web app with lots of features such as scrambles for different puzzle types 3x3,2x2,4x4 up to 7x7.It also has charts to show your progess of your solve times.",
+            "previewLink": "https://www.linkedin.com/posts/naman22a_rubikscube-speedcubing-cstimer-activity-7192208523940749312-o5ed?utm_source=share&utm_medium=member_desktop",
+            "githubLink": "https://github.com/naman22a/cstimer",
+            "image": "cstimer.png",
             "tags": [
-                "React",
-                "Typescript",
-                "Shadcn UI",
+                "Next JS",
                 "React Query",
+                "Tailwind",
+                "Zustand",
+                "Typescript",
                 "Nest JS",
-                "Docker",
                 "Prisma",
                 "PostgreSQL"
             ]
@@ -81,6 +81,13 @@
                 "Seaborn",
                 "Scikit-Learn"
             ]
+        },
+        {
+            "title": "Chat App",
+            "description": "My chat app is a modern messaging platform built with Flutter and Firebase, offering real-time chats, user authentication. It supports one-on-one conversations with instant message delivery using Firestore. Firebase Authentication secures user sign-ins. With a clean UI, cross-platform support, and strong security, the app provides a fast, reliable, and user-friendly communication experience.",
+            "githubLink": "https://github.com/naman22a/chat_app",
+            "image": "chat-app.png",
+            "tags": ["Dart", "Flutter", "Firebase"]
         }
     ]
 }

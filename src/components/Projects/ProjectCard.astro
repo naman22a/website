@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import type { ProjectSchemaType } from '../../content/config';
 import Button from '../shared/Button';
+import { twMerge } from 'tailwind-merge';
 interface Props extends ProjectSchemaType {
     index: number;
 }
@@ -50,13 +51,16 @@ const { index, title, description, tags, previewLink, githubLink, image } =
             </a>
         </div>
     </div>
-    <div class={`lg:w-1/2 ${index % 2 === 0 ? 'lg:ml-10' : 'lg:mr-10'}`}>
+    <div class={twMerge('lg:w-1/2', index % 2 === 0 ? 'lg:ml-10' : 'lg:mr-10')}>
         <Image
             src={`/projects/${image}`}
             height={300}
             width={600}
             alt={title}
-            class="shadow-lg rounded-lg"
+            class={twMerge(
+                'shadow-lg rounded-lg',
+                image === 'chat-app.png' && 'h-[600px] w-[400px]'
+            )}
         />
     </div>
 </div>
