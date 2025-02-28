@@ -3,7 +3,7 @@
     "largeText1": "Full Stack Developer",
     "largeText2": "Linux Enthusiast",
     "buttonText": "my projects",
-    "description": "I am a Full Stack Web Developer and Linux Enthusiast. I have experience with a wide range of technologies and tools, including HTML, CSS, JavaScript, React, Next js,Node.js, Express, MongoDB, Redis,MySQL and PostgresSQL. I am also experienced in design tools such as Figma, GIMP and Inkscape. I am a quick learner and have a strong attention to detail. I am a motivated self-starter who is always looking for new challenges.",
+    "description": "I am a passionate Full Stack Web Developer, Linux Enthusiast, and AI/ML Practitioner with experience in building scalable web and mobile applications. Proficient in JavaScript, TypeScript, Python, C/C++, and Dart, I specialize in React, Next.js, Nest.js, and Flutter, along with databases like PostgreSQL, MongoDB, and Redis. I have hands-on experience in GraphQL, WebSockets, and AI/ML libraries like TensorFlow, Scikit-Learn, Pandas, and Numpy. With a strong attention to detail and a passion for problem-solving, I am always eager to learn and take on new challenges.",
     "skills": [
         {
             "name": "typescript",
@@ -114,6 +114,11 @@
             "name": "TensorFlow",
             "icon": "tf.png",
             "href": "https://www.tensorflow.org"
+        },
+        {
+            "name": "Flutter",
+            "icon": "flutter.png",
+            "href": "https://flutter.dev"
         }
     ]
 }
