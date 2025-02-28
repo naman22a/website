@@ -151,6 +151,7 @@ const Contact: Component<Props> = ({
                                 type="text"
                                 value={name()}
                                 onChange={(e) => setName(e.target.value)}
+                                autocomplete="off"
                             />
                             <span class="text-sm font-semibold text-red-600 mt-2">
                                 {' '}
@@ -174,6 +175,7 @@ const Contact: Component<Props> = ({
                                 type="email"
                                 value={email()}
                                 onChange={(e) => setEmail(e.target.value)}
+                                autocomplete="off"
                             />
                             <span class="text-sm font-semibold text-red-600 mt-2">
                                 {' '}
