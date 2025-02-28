@@ -119,6 +119,11 @@
             "name": "Flutter",
             "icon": "flutter.png",
             "href": "https://flutter.dev"
+        },
+        {
+            "name": "Firebase",
+            "icon": "firebase.png",
+            "href": "https://firebase.google.com"
         }
     ]
 }
