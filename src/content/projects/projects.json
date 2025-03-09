@@ -36,7 +36,7 @@
         {
             "title": "CsTimer - Rubik's Cube Timer",
             "description": "This web app is a clone of a rubik's cube timer app with full auth features such as reset password and confirmation email.It is a highly interactive web app with lots of features such as scrambles for different puzzle types 3x3,2x2,4x4 up to 7x7.It also has charts to show your progess of your solve times.",
-            "previewLink": "https://www.linkedin.com/posts/naman22a_rubikscube-speedcubing-cstimer-activity-7192208523940749312-o5ed?utm_source=share&utm_medium=member_desktop",
+            "previewLink": "https://cstimer.namanarora.xyz",
             "githubLink": "https://github.com/naman22a/cstimer",
             "image": "cstimer.png",
             "tags": [
