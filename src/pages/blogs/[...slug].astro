@@ -51,7 +51,7 @@ const { Content } = await entry.render();
     </p>
     <div class="mt-4 mb-8">
         {
-            tags.map((tag) => (
+            tags.map((tag: string) => (
                 <a href={`/tags/${tag}`}>
                     <span class="py-2 px-5 rounded-full bg-ctp-surface0 cursor-pointer hover:bg-ctp-blue transition-all duration-150 mr-5 capitalize">
                         {tag}
