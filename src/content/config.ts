@@ -8,7 +8,8 @@ const landing = defineCollection({
         smallText: z.string(),
         name: z.string(),
         description: z.string(),
-        buttonText: z.string()
+        buttonText: z.string(),
+        resumeLink: z.string().url()
     })
 });
 

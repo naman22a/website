@@ -4,7 +4,15 @@ import Button from '../shared/Button';
 import BackgroundAnimation from './BackgroundAnimation';
 
 const data = (await getEntry('landing', 'landing')).data;
-const { bgText1, bgText2, smallText, name, description, buttonText } = data;
+const {
+    bgText1,
+    bgText2,
+    smallText,
+    name,
+    description,
+    buttonText,
+    resumeLink
+} = data;
 ---
 
 <div
@@ -29,7 +37,7 @@ const { bgText1, bgText2, smallText, name, description, buttonText } = data;
         <p class="lg:w-2/3">
             {description}
         </p>
-        <a href="#mySkillSet" aria-label="Read more about me">
+        <a target="_blank" href={resumeLink} aria-label="Download my Resume">
             <Button className="invisible lg:visible">
                 {buttonText}
             </Button>
