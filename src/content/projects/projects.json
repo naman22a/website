@@ -3,7 +3,7 @@
         {
             "title": "Leetcode",
             "description": "LeetCode clone is a coding challenge platform that helps developers practice problem-solving and prepare for technical interviews. It features an interactive editor, test case evaluation, secure code execution in Docker.",
-            "previewLink": "https://www.linkedin.com/posts/naman22a_typescript-docker-coding-activity-7299674849549897728-KrcJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD-DmuUBFurn9iPjgOzPd9a_Mh3OLgIBlJs",
+            "previewLink": "https://leetcode.namanarora.xyz",
             "githubLink": "https://github.com/naman22a/leetcode",
             "image": "leetcode.png",
             "tags": [
