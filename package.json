@@ -19,6 +19,7 @@
         "@astrojs/vercel": "^7.8.1",
         "@emailjs/browser": "^4.4.1",
         "@fontsource-variable/jetbrains-mono": "^5.1.0",
+        "aos": "^2.3.4",
         "astro": "^4.15.4",
         "dayjs": "^1.11.13",
         "rehype-autolink-headings": "^7.1.0",
@@ -33,6 +34,7 @@
     },
     "devDependencies": {
         "@catppuccin/tailwindcss": "^0.1.6",
+        "@types/aos": "^3.0.7",
         "prettier": "^3.3.3",
         "prettier-plugin-astro": "^0.14.1",
         "sass": "^1.78.0"

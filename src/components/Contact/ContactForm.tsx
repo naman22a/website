@@ -48,10 +48,20 @@ const Contact: Component<Props> = ({
             class="my-20 flex flex-col justify-center items-center"
             id="contact"
         >
-            <h4 class="uppercase tracking-wider text-ctp-red font-bold text-sm">
+            <h4
+                class="uppercase tracking-wider text-ctp-red font-bold text-sm"
+                data-aos="fade-up"
+                data-aos-delay="0"
+            >
                 {smallText}
             </h4>
-            <h2 class="font-bold mt-2 mb-6 text-3xl">{largeText}</h2>
+            <h2
+                class="font-bold mt-2 mb-6 text-3xl"
+                data-aos="fade-up"
+                data-aos-delay="300"
+            >
+                {largeText}
+            </h2>
 
             <div class="flex flex-col md:flex-row">
                 <div class="md:w-1/2 grid place-items-center">
@@ -137,7 +147,11 @@ const Contact: Component<Props> = ({
                         }}
                     >
                         {/* Name */}
-                        <div class="flex flex-col my-5">
+                        <div
+                            class="flex flex-col my-5"
+                            data-aos="fade-right"
+                            data-aos-delay="400"
+                        >
                             <label for="name" class="mb-2 text-lg">
                                 Name
                             </label>
@@ -161,7 +175,11 @@ const Contact: Component<Props> = ({
 
                         {/* Email */}
 
-                        <div class="flex flex-col my-5">
+                        <div
+                            class="flex flex-col my-5"
+                            data-aos="fade-right"
+                            data-aos-delay="500"
+                        >
                             <label for="email" class="mb-2 text-lg">
                                 Email
                             </label>
@@ -184,7 +202,11 @@ const Contact: Component<Props> = ({
                         </div>
 
                         {/* Message */}
-                        <div class="flex flex-col my-5">
+                        <div
+                            class="flex flex-col my-5"
+                            data-aos="fade-right"
+                            data-aos-delay="600"
+                        >
                             <label for="message" class="mb-2 text-lg">
                                 Message
                             </label>
@@ -206,16 +228,18 @@ const Contact: Component<Props> = ({
                             </span>
                         </div>
 
-                        <Button type="submit">
-                            <div class="flex items-center">
-                                <RiBusinessSendPlaneFill class="mr-3 h-6 w-6" />
-                                <span>Send Email</span>
-                            </div>
-                        </Button>
+                        <div data-aos="fade-right" data-aos-delay="700">
+                            <Button type="submit">
+                                <div class="flex items-center">
+                                    <RiBusinessSendPlaneFill class="mr-3 h-6 w-6" />
+                                    <span>Send Email</span>
+                                </div>
+                            </Button>
+                        </div>
                     </form>
                 </div>
                 <div class="md:w-1/2 flex flex-col pt-12">
-                    <p class="">
+                    <p data-aos="fade-up" data-aos-delay="400">
                         {description1}{' '}
                         <span class="font-bold text-ctp-sapphire">
                             {myEmail}
@@ -223,7 +247,11 @@ const Contact: Component<Props> = ({
                         {description2}
                     </p>
                     <div class="font-JetBrains mt-7">
-                        <div class="flex my-3">
+                        <div
+                            class="flex my-3"
+                            data-aos="fade-up"
+                            data-aos-delay="500"
+                        >
                             <IoLocationSharp class="h-5 w-5 mr-3 text-ctp-peach" />
                             <a
                                 href="https://goo.gl/maps/JKMwzmvmzk9HQheWA"
@@ -233,13 +261,19 @@ const Contact: Component<Props> = ({
                             </a>
                         </div>
 
-                        <div class="flex my-2">
+                        <div
+                            class="flex my-2"
+                            data-aos="fade-up"
+                            data-aos-delay="600"
+                        >
                             <IoMail class="h-5 w-5 mr-3 text-ctp-green" />
                             <a href={`mailto:${myEmail}`}>{myEmail}</a>
                         </div>
                     </div>
                     <div class="flex mt-5">
                         <a
+                            data-aos="fade-up"
+                            data-aos-delay="600"
                             href={linkedinLink}
                             aria-label="LinkedIn Profile"
                             target="_blank"
@@ -248,6 +282,8 @@ const Contact: Component<Props> = ({
                             <BsLinkedin class="h-7 w-7" />
                         </a>
                         <a
+                            data-aos="fade-up"
+                            data-aos-delay="650"
                             href={githubLink}
                             aria-label="Github Profile"
                             target="_blank"
@@ -256,6 +292,8 @@ const Contact: Component<Props> = ({
                             <BsGithub class="h-7 w-7" />
                         </a>
                         <a
+                            data-aos="fade-up"
+                            data-aos-delay="700"
                             href={leetcodeLink}
                             aria-label="Leetcode Profile"
                             target="_blank"
@@ -264,6 +302,8 @@ const Contact: Component<Props> = ({
                             <SiLeetcode class="h-7 w-7" />
                         </a>
                         <a
+                            data-aos="fade-up"
+                            data-aos-delay="750"
                             href={twitterLink}
                             aria-label="Twitter Profile"
                             target="_blank"
@@ -272,6 +312,8 @@ const Contact: Component<Props> = ({
                             <FaBrandsTwitter class="h-7 w-7" />
                         </a>
                         <a
+                            data-aos="fade-up"
+                            data-aos-delay="800"
                             href={instagramLink}
                             aria-label="Instagram Profile"
                             target="_blank"
