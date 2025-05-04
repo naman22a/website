@@ -24,12 +24,12 @@ const data = (await getEntry('contact', 'contact')).data;
             Naman Arora
             <span class="hidden md:inline-block">—</span>
             <a
-                href="https://twitter.com/namanarora1022"
+                href={data.twitterLink}
                 class="ml-1 hover:text-ctp-red font-semibold hidden md:inline-block"
                 rel="noopener noreferrer"
                 target="_blank"
             >
-                naman22a
+                naman_22a
             </a>
         </p>
         <Icons {...data} />
