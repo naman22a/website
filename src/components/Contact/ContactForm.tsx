@@ -9,6 +9,7 @@ import emailjs from '@emailjs/browser';
 import toast, { Toaster } from 'solid-toast';
 import { isEmail } from '../../utils';
 import { twMerge } from 'tailwind-merge';
+import type { DOMElement } from 'solid-js/jsx-runtime';
 
 interface Props {
     smallText: string;
@@ -43,6 +44,89 @@ const Contact: Component<Props> = ({
     const [message, setMessage] = createSignal('');
     const [messageError, setMessageError] = createSignal('');
 
+    const handleSubmit = async (
+        e: SubmitEvent & {
+            currentTarget: HTMLFormElement;
+            target: DOMElement;
+        }
+    ) => {
+        e.preventDefault();
+        setNameError('');
+        setEmailError('');
+        setMessageError('');
+
+        try {
+            // validation
+            if (!name()) {
+                setNameError('Name is required.');
+                return;
+            }
+
+            if (!email()) {
+                setEmailError('Email is required.');
+                return;
+            }
+
+            if (!message()) {
+                setMessageError('Message is required.');
+                return;
+            }
+
+            if (!isEmail(email())) {
+                setEmailError('Invalid email.');
+                return;
+            }
+
+            const res = await emailjs.send(
+                import.meta.env.PUBLIC_EMAILJS_SERVICE_ID,
+                import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID,
+                {
+                    name: name(),
+                    email: email(),
+                    message: message()
+                },
+                {
+                    limitRate: {
+                        throttle: 10000 // 10 secs
+                    },
+                    publicKey: import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY
+                }
+            );
+            if (res.status === 200) {
+                toast.success(
+                    'Thank you. I will get back to you as soon as possible.',
+                    {
+                        position: 'top-center',
+                        style: {
+                            'background-color': '#1e1e2e',
+                            color: '#cdd6f4',
+                            'text-align': 'center'
+                        }
+                    }
+                );
+            } else {
+                toast.error('Opps! Something went wrong.', {
+                    position: 'top-center',
+                    style: {
+                        'background-color': '#1e1e2e',
+                        color: '#cdd6f4',
+                        'text-align': 'center'
+                    }
+                });
+            }
+        } catch (error) {
+            console.error(error);
+            toast.error('Opps! Something went wrong.', {
+                position: 'top-center',
+                style: {
+                    'background-color': '#1e1e2e',
+                    color: '#cdd6f4',
+                    'text-align': 'center'
+                }
+            });
+        }
+    };
+
     return (
         <div
             class="my-20 flex flex-col justify-center items-center"
@@ -67,84 +151,7 @@ const Contact: Component<Props> = ({
                 <div class="md:w-1/2 grid place-items-center">
                     <form
                         class="mt-5 min-w-full md:px-10"
-                        onSubmit={async (e) => {
-                            e.preventDefault();
-                            setNameError('');
-                            setEmailError('');
-                            setMessageError('');
-
-                            try {
-                                // validation
-                                if (!name()) {
-                                    setNameError('Name is required.');
-                                    return;
-                                }
-
-                                if (!email()) {
-                                    setEmailError('Email is required.');
-                                    return;
-                                }
-
-                                if (!message()) {
-                                    setMessageError('Message is required.');
-                                    return;
-                                }
-
-                                if (!isEmail(email())) {
-                                    setEmailError('Invalid email.');
-                                    return;
-                                }
-
-                                const res = await emailjs.send(
-                                    import.meta.env.PUBLIC_EMAILJS_SERVICE_ID,
-                                    import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID,
-                                    {
-                                        name: name(),
-                                        email: email(),
-                                        message: message()
-                                    },
-                                    {
-                                        limitRate: {
-                                            throttle: 10000 // 10 secs
-                                        },
-                                        publicKey: import.meta.env
-                                            .PUBLIC_EMAILJS_PUBLIC_KEY
-                                    }
-                                );
-                                if (res.status === 200) {
-                                    toast.success(
-                                        'Thank you. I will get back to you as soon as possible.',
-                                        {
-                                            position: 'top-center',
-                                            style: {
-                                                'background-color': '#1e1e2e',
-                                                color: '#cdd6f4',
-                                                'text-align': 'center'
-                                            }
-                                        }
-                                    );
-                                } else {
-                                    toast.error('Opps! Something went wrong.', {
-                                        position: 'top-center',
-                                        style: {
-                                            'background-color': '#1e1e2e',
-                                            color: '#cdd6f4',
-                                            'text-align': 'center'
-                                        }
-                                    });
-                                }
-                            } catch (error) {
-                                console.error(error);
-                                toast.error('Opps! Something went wrong.', {
-                                    position: 'top-center',
-                                    style: {
-                                        'background-color': '#1e1e2e',
-                                        color: '#cdd6f4',
-                                        'text-align': 'center'
-                                    }
-                                });
-                            }
-                        }}
+                        onSubmit={handleSubmit}
                     >
                         {/* Name */}
                         <div
@@ -174,7 +181,6 @@ const Contact: Component<Props> = ({
                         </div>
 
                         {/* Email */}
-
                         <div
                             class="flex flex-col my-5"
                             data-aos="fade-right"
