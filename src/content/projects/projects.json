@@ -53,13 +53,6 @@
             ]
         },
         {
-            "title": "Chat App",
-            "description": "My chat app is a modern messaging platform built with Flutter and Firebase, offering real-time chats, user authentication. It supports one-on-one conversations with instant message delivery using Firestore. Firebase Authentication secures user sign-ins. With a clean UI, cross-platform support, and strong security, the app provides a fast, reliable, and user-friendly communication experience.",
-            "githubLink": "https://github.com/naman22a/chat_app",
-            "image": "chat-app.png",
-            "tags": ["Dart", "Flutter", "Firebase"]
-        },
-        {
             "title": "Heart Disease Classification",
             "description": "This project aims to predict the likelihood of heart disease in individuals based on their medical and demographic data. By leveraging Logistic Regression, a popular statistical model for binary classification, the project classifies individuals into two categories: those likely to have heart disease and those who are not.",
             "previewLink": "https://drive.google.com/file/d/1fMD92FOQjOpR5Gtt7edIOMinyAbt-Xa_/view?usp=sharing",
