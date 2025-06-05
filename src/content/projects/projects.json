@@ -19,6 +19,23 @@
             ]
         },
         {
+            "title": "SAR Image Enhancement and Terrain Classification Methods",
+            "description": "Generative Adversarial Networks (GANs) play a crucial role in SAR image colorization, transforming grayscale SAR images into visually interpretable colorized representations. Since SAR images inherently lack natural color information, GANs learn complex mappings between SAR data and corresponding optical imagery, effectively generating realistic colorized outputs. The generator synthesizes colorized images, while the discriminator ensures realism by distinguishing between real and generated images. This approach enhances the interpretability of SAR data, aiding applications in terrain analysis, environmental monitoring, and disaster management by bridging the gap between SAR and optical imagery.",
+            "githubLink": "https://github.com/naman22a/sar",
+            "image": "SAR.png",
+            "tags": [
+                "React",
+                "Typescript",
+                "Tailwind CSS",
+                "Flask",
+                "Numpy",
+                "Matplotlib",
+                "OpenCV",
+                "Keras",
+                "Tensorflow"
+            ]
+        },
+        {
             "title": "Leetcode",
             "description": "LeetCode clone is a coding challenge platform that helps developers practice problem-solving and prepare for technical interviews. It features an interactive editor, test case evaluation, secure code execution in Docker.",
             "previewLink": "https://leetcode.namanarora.xyz",
@@ -33,6 +50,29 @@
                 "Docker",
                 "Prisma",
                 "PostgreSQL"
+            ]
+        },
+        {
+            "title": "Chat App",
+            "description": "My chat app is a modern messaging platform built with Flutter and Firebase, offering real-time chats, user authentication. It supports one-on-one conversations with instant message delivery using Firestore. Firebase Authentication secures user sign-ins. With a clean UI, cross-platform support, and strong security, the app provides a fast, reliable, and user-friendly communication experience.",
+            "githubLink": "https://github.com/naman22a/chat_app",
+            "image": "chat-app.png",
+            "tags": ["Dart", "Flutter", "Firebase"]
+        },
+        {
+            "title": "Heart Disease Classification",
+            "description": "This project aims to predict the likelihood of heart disease in individuals based on their medical and demographic data. By leveraging Logistic Regression, a popular statistical model for binary classification, the project classifies individuals into two categories: those likely to have heart disease and those who are not.",
+            "previewLink": "https://drive.google.com/file/d/1fMD92FOQjOpR5Gtt7edIOMinyAbt-Xa_/view?usp=sharing",
+            "githubLink": "https://github.com/naman22a/heart-disease-classification",
+            "image": "heart-disease.png",
+            "tags": [
+                "Python",
+                "Flask",
+                "Numpy",
+                "Pandas",
+                "Matplotlib",
+                "Seaborn",
+                "Scikit-Learn"
             ]
         },
         {
@@ -52,23 +92,6 @@
             ]
         },
         {
-            "title": "CsTimer - Rubik's Cube Timer",
-            "description": "This web app is a clone of a rubik's cube timer app with full auth features such as reset password and confirmation email.It is a highly interactive web app with lots of features such as scrambles for different puzzle types 3x3,2x2,4x4 up to 7x7.It also has charts to show your progess of your solve times.",
-            "previewLink": "https://cstimer.namanarora.xyz",
-            "githubLink": "https://github.com/naman22a/cstimer",
-            "image": "cstimer.png",
-            "tags": [
-                "Next JS",
-                "React Query",
-                "Tailwind",
-                "Zustand",
-                "Typescript",
-                "Nest JS",
-                "Prisma",
-                "PostgreSQL"
-            ]
-        },
-        {
             "title": "Ecommerce Website",
             "description": "This is a fully functional ecommerce webiste made with next js , nest js and sanity.Users can login and register.There is functionality for forgot password and confirmation of user email.Users can add products to cart, remove them from cart and change the quantity of items.Users can purchase items via stripe checkout feature.",
             "previewLink": "https://www.linkedin.com/posts/naman22a_ecommerce-webdevelopment-nextjs-activity-7211982662364725248-mLKE",
@@ -85,27 +108,21 @@
             ]
         },
         {
-            "title": "Heart Disease Classification",
-            "description": "This project aims to predict the likelihood of heart disease in individuals based on their medical and demographic data. By leveraging Logistic Regression, a popular statistical model for binary classification, the project classifies individuals into two categories: those likely to have heart disease and those who are not.",
-            "previewLink": "https://drive.google.com/file/d/1fMD92FOQjOpR5Gtt7edIOMinyAbt-Xa_/view?usp=sharing",
-            "githubLink": "https://github.com/naman22a/heart-disease-classification",
-            "image": "heart-disease.png",
+            "title": "CsTimer - Rubik's Cube Timer",
+            "description": "This web app is a clone of a rubik's cube timer app with full auth features such as reset password and confirmation email.It is a highly interactive web app with lots of features such as scrambles for different puzzle types 3x3,2x2,4x4 up to 7x7.It also has charts to show your progess of your solve times.",
+            "previewLink": "https://cstimer.namanarora.xyz",
+            "githubLink": "https://github.com/naman22a/cstimer",
+            "image": "cstimer.png",
             "tags": [
-                "Python",
-                "Flask",
-                "Numpy",
-                "Pandas",
-                "Matplotlib",
-                "Seaborn",
-                "Scikit-Learn"
+                "Next JS",
+                "React Query",
+                "Tailwind",
+                "Zustand",
+                "Typescript",
+                "Nest JS",
+                "Prisma",
+                "PostgreSQL"
             ]
-        },
-        {
-            "title": "Chat App",
-            "description": "My chat app is a modern messaging platform built with Flutter and Firebase, offering real-time chats, user authentication. It supports one-on-one conversations with instant message delivery using Firestore. Firebase Authentication secures user sign-ins. With a clean UI, cross-platform support, and strong security, the app provides a fast, reliable, and user-friendly communication experience.",
-            "githubLink": "https://github.com/naman22a/chat_app",
-            "image": "chat-app.png",
-            "tags": ["Dart", "Flutter", "Firebase"]
         }
     ]
 }
