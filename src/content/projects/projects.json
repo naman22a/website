@@ -20,7 +20,7 @@
         },
         {
             "title": "SAR Image Enhancement and Terrain Classification Methods",
-            "description": "Generative Adversarial Networks (GANs) play a crucial role in SAR image colorization, transforming grayscale SAR images into visually interpretable colorized representations. Since SAR images inherently lack natural color information, GANs learn complex mappings between SAR data and corresponding optical imagery, effectively generating realistic colorized outputs. The generator synthesizes colorized images, while the discriminator ensures realism by distinguishing between real and generated images. This approach enhances the interpretability of SAR data, aiding applications in terrain analysis, environmental monitoring, and disaster management by bridging the gap between SAR and optical imagery.",
+            "description": "SAR Vision is an end-to-end deep learning project focused on enhancing and classifying Synthetic Aperture Radar (SAR) imagery. It combines GAN-based SAR image colorization with CNN-based terrain classification to improve the interpretability and usability of remote sensing data. The project includes a React + Flask web interface, enabling users to upload grayscale SAR images and receive colorized, classified results in real-time. This powerful tool supports applications in agriculture, disaster response, and environmental monitoring by bridging the gap between SAR and optical imagery.",
             "githubLink": "https://github.com/naman22a/sar",
             "image": "SAR.png",
             "tags": [
