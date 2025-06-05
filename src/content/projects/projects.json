@@ -1,6 +1,24 @@
 {
     "projects": [
         {
+            "title": "Brain Tumor Detection using YOLO v11",
+            "description": "This project leverages the power of YOLO v11 by Ultralytics and integrates it into a Flutter-based mobile app, enabling fast and accurate tumor detection from MRI images right from your phone!",
+            "githubLink": "https://github.com/naman22a/Brain-Tumor-Detection-using-YOLO",
+            "image": "brain_tumor.jpeg",
+            "tags": [
+                "Flutter",
+                "Dart",
+                "Provider",
+                "Image Picker",
+                "Dio",
+                "Python",
+                "Flask",
+                "YOLO v11",
+                "Ultralytics",
+                "Roboflow"
+            ]
+        },
+        {
             "title": "Leetcode",
             "description": "LeetCode clone is a coding challenge platform that helps developers practice problem-solving and prepare for technical interviews. It features an interactive editor, test case evaluation, secure code execution in Docker.",
             "previewLink": "https://leetcode.namanarora.xyz",
