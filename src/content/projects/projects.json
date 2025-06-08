@@ -1,6 +1,21 @@
 {
     "projects": [
         {
+            "title": "Structural Protein Sequences Classification",
+            "description": "This project explores the application of Natural Language Processing (NLP) techniques to classify structural protein sequences. By treating protein sequences like natural language, we leverage deep learning models specifically BiLSTM to identify and classify structural types based on sequence patterns.",
+            "githubLink": "https://github.com/naman22a/Structural-Protein-Sequences-Classification",
+            "image": "structural-protein-sequences-classification.png",
+            "tags": [
+                "Python",
+                "NumPy",
+                "Pandas",
+                "Scikit-Learn",
+                "Keras",
+                "Tensorflow",
+                "NLP"
+            ]
+        },
+        {
             "title": "Brain Tumor Detection using YOLO v11",
             "description": "This project leverages the power of YOLO v11 by Ultralytics and integrates it into a Flutter-based mobile app, enabling fast and accurate tumor detection from MRI images right from your phone!",
             "githubLink": "https://github.com/naman22a/Brain-Tumor-Detection-using-YOLO",
