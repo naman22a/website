@@ -1,9 +1,9 @@
 {
     "smallText": "my skillset",
-    "largeText1": "Full Stack Developer",
-    "largeText2": "Linux Enthusiast",
+    "largeText1": "Backend Developer",
+    "largeText2": "DevOps Engineer",
     "buttonText": "my projects",
-    "description": "I am a passionate Full Stack Web Developer, Linux Enthusiast, and AI/ML Practitioner with experience in building scalable web and mobile applications. Proficient in JavaScript, TypeScript, Python, C/C++, and Dart, I specialize in React, Next.js, Nest.js, and Flutter, along with databases like PostgreSQL, MongoDB, and Redis. I have hands-on experience in GraphQL, WebSockets, and AI/ML libraries like TensorFlow, Scikit-Learn, Pandas, and Numpy. With a strong attention to detail and a passion for problem-solving, I am always eager to learn and take on new challenges.",
+    "description": "Backend Developer and DevOps Engineer experienced in building scalable microservices, distributed systems, and cloud-native architectures. Skilled in NestJS, Node.js, PostgreSQL, MongoDB, Redis, Docker, Docker compose, CI/CD, and Linux. I focus on reliability, performance, and automation while also leveraging AI/ML tools when needed. Passionate about problem-solving and creating secure, high-performance backend systems.",
     "skills": [
         {
             "name": "typescript",
@@ -91,39 +91,34 @@
             "href": "https://www.docker.com"
         },
         {
-            "name": "Numpy",
-            "icon": "numpy.svg",
-            "href": "https://numpy.org"
+            "name": "bullMQ",
+            "icon": "bullmq.png",
+            "href": "https://bullmq.io"
         },
         {
-            "name": "Pandas",
-            "icon": "pandas.png",
-            "href": "https://pandas.pydata.org"
+            "name": "CI/CD",
+            "icon": "cicd.png",
+            "href": "https://en.wikipedia.org/wiki/CI/CD"
         },
         {
-            "name": "Matplotlib",
-            "icon": "matplotlib.png",
-            "href": "https://matplotlib.org"
+            "name": "Nginx",
+            "icon": "nginx.png",
+            "href": "https://nginx.org"
         },
         {
-            "name": "Scikit-Learn",
-            "icon": "sklearn.png",
-            "href": "https://scikit-learn.org/stable"
+            "name": "Prometheus",
+            "icon": "prometheus.png",
+            "href": "https://prometheus.io"
         },
         {
-            "name": "TensorFlow",
-            "icon": "tf.png",
-            "href": "https://www.tensorflow.org"
+            "name": "Grafana",
+            "icon": "grafana.png",
+            "href": "https://grafana.com"
         },
         {
-            "name": "Flutter",
-            "icon": "flutter.png",
-            "href": "https://flutter.dev"
-        },
-        {
-            "name": "Firebase",
-            "icon": "firebase.png",
-            "href": "https://firebase.google.com"
+            "name": "Loki",
+            "icon": "loki.png",
+            "href": "https://grafana.com/oss/loki/"
         }
     ]
 }

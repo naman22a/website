@@ -1,70 +1,27 @@
 {
     "projects": [
         {
-            "title": "Structural Protein Sequences Classification",
-            "description": "This project explores the application of Natural Language Processing (NLP) techniques to classify structural protein sequences. By treating protein sequences like natural language, we leverage deep learning models specifically BiLSTM to identify and classify structural types based on sequence patterns.",
-            "githubLink": "https://github.com/naman22a/Structural-Protein-Sequences-Classification",
-            "image": "structural-protein-sequences-classification.png",
+            "title": "Leetcode Microservices",
+            "description": "A production-ready LeetCode-style coding platform built using a complete microservices architecture. Features isolated code execution inside Docker containers, API Gateway routing, inter-service communication, real-time WebSockets, secure authentication, PostgreSQL + Prisma ORM, Redis caching, distributed queues, and advanced DevOps tooling including Prometheus, Grafana, Loki, Docker Compose, and GitHub Actions CI/CD.",
+            "githubLink": "https://github.com/naman22a/leetcode-microservices",
+            "image": "two-sum.png",
             "tags": [
-                "Python",
-                "NumPy",
-                "Pandas",
-                "Scikit-Learn",
-                "Keras",
-                "Tensorflow",
-                "NLP"
-            ]
-        },
-        {
-            "title": "Brain Tumor Detection using YOLO v11",
-            "description": "This project leverages the power of YOLO v11 by Ultralytics and integrates it into a Flutter-based mobile app, enabling fast and accurate tumor detection from MRI images right from your phone!",
-            "githubLink": "https://github.com/naman22a/Brain-Tumor-Detection-using-YOLO",
-            "image": "brain_tumor.jpeg",
-            "tags": [
-                "Flutter",
-                "Dart",
-                "Provider",
-                "Image Picker",
-                "Dio",
-                "Python",
-                "Flask",
-                "YOLO v11",
-                "Ultralytics",
-                "Roboflow"
-            ]
-        },
-        {
-            "title": "SAR Image Enhancement and Terrain Classification Methods",
-            "description": "SAR Vision is an end-to-end deep learning project focused on enhancing and classifying Synthetic Aperture Radar (SAR) imagery. It combines GAN-based SAR image colorization with CNN-based terrain classification to improve the interpretability and usability of remote sensing data. The project includes a React + Flask web interface, enabling users to upload grayscale SAR images and receive colorized, classified results in real-time. This powerful tool supports applications in agriculture, disaster response, and environmental monitoring by bridging the gap between SAR and optical imagery.",
-            "githubLink": "https://github.com/naman22a/sar",
-            "image": "SAR.png",
-            "tags": [
-                "React",
-                "Typescript",
-                "Tailwind CSS",
-                "Flask",
-                "Numpy",
-                "Matplotlib",
-                "OpenCV",
-                "Keras",
-                "Tensorflow"
-            ]
-        },
-        {
-            "title": "Leetcode",
-            "description": "LeetCode clone is a coding challenge platform that helps developers practice problem-solving and prepare for technical interviews. It features an interactive editor, test case evaluation, secure code execution in Docker.",
-            "previewLink": "https://www.linkedin.com/posts/naman22a_typescript-docker-coding-activity-7299674849549897728-KrcJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD-DmuUBFurn9iPjgOzPd9a_Mh3OLgIBlJs",
-            "githubLink": "https://github.com/naman22a/leetcode",
-            "image": "leetcode.png",
-            "tags": [
-                "React",
-                "Typescript",
-                "Shadcn UI",
-                "React Query",
-                "Nest JS",
+                "Microservices",
+                "NestJS",
+                "TypeScript",
                 "Docker",
+                "Docker Compose",
+                "PostgreSQL",
                 "Prisma",
-                "PostgreSQL"
+                "Redis",
+                "API Gateway",
+                "WebSockets",
+                "CI/CD",
+                "GitHub Actions",
+                "Prometheus",
+                "Grafana",
+                "Loki",
+                "Observability"
             ]
         },
         {
