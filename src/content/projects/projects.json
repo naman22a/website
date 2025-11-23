@@ -4,7 +4,7 @@
             "title": "Leetcode Microservices",
             "description": "A production-ready LeetCode-style coding platform built using a complete microservices architecture. Features isolated code execution inside Docker containers, API Gateway routing, inter-service communication, real-time WebSockets, secure authentication, PostgreSQL + Prisma ORM, Redis caching, distributed queues, and advanced DevOps tooling including Prometheus, Grafana, Loki, Docker Compose, and GitHub Actions CI/CD.",
             "githubLink": "https://github.com/naman22a/leetcode-microservices",
-            "image": "two-sum.png",
+            "image": "leetcode.png",
             "tags": [
                 "Microservices",
                 "NestJS",
