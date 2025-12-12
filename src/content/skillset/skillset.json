@@ -1,9 +1,9 @@
 {
     "smallText": "my skillset",
-    "largeText1": "Backend Developer",
+    "largeText1": "Full Stack Developer",
     "largeText2": "DevOps Engineer",
     "buttonText": "my projects",
-    "description": "Backend Developer and DevOps Engineer experienced in building scalable microservices, distributed systems, and cloud-native architectures. Skilled in NestJS, Node.js, PostgreSQL, MongoDB, Redis, Docker, Docker compose, CI/CD, and Linux. I focus on reliability, performance, and automation while also leveraging AI/ML tools when needed. Passionate about problem-solving and creating secure, high-performance backend systems.",
+    "description": "Full Stack Developer and DevOps Engineer experienced in building scalable microservices, distributed systems, and cloud-native architectures. Skilled in NestJS, Node.js, PostgreSQL, MongoDB, Redis, Docker, Docker compose, CI/CD, and Linux. I focus on reliability, performance, and automation while also leveraging AI/ML tools when needed. Passionate about problem-solving and creating secure, high-performance backend systems.",
     "skills": [
         {
             "name": "typescript",
