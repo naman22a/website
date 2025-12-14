@@ -1,0 +1,17 @@
+{
+    "experiences": [
+        {
+            "position": "Frontend Web Developer",
+            "company": {
+                "name": "Airtel Payments Bank",
+                "logo": "https://media.licdn.com/dms/image/v2/C4D0BAQH6BGOW1Mhj5g/company-logo_200_200/company-logo_200_200/0/1672642007220/airtelpaymentsbank_logo?e=1767225600&v=beta&t=dmakdtTmMC5hAH8b_efmqTLqeSZSl8K0EpKzBpWcwys"
+            },
+            "startDate": "Sep 2025",
+            "endDate": "Nov 2025",
+            "location": "Gurugram, Haryana, India",
+            "locationType": "remote",
+            "type": "internship",
+            "descripiton": "During my internship at Airtel Payments Bank, I contributed to the Transparent Banking project by converting Figma UI designs into responsive, production-ready web pages. My work involved developing web interfaces using HTML, CSS, and JavaScript, translating Figma designs into clean and maintainable front-end code, ensuring cross-browser compatibility and responsiveness, and collaborating with my mentor, Mr. Shubham, to refine UI components and enhance usability. This experience strengthened my skills in front-end development, UI implementation, and working within a structured, professional product environment."
+        }
+    ]
+}

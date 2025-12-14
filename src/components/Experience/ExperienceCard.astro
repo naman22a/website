@@ -1,0 +1,42 @@
+---
+import { Image } from 'astro:assets';
+import type { ExperienceSchemaType } from '../../content/config';
+interface Props extends ExperienceSchemaType {
+    index: number;
+}
+
+const {
+    position,
+    company,
+    startDate,
+    endDate,
+    location,
+    locationType,
+    type,
+    descripiton
+} = Astro.props;
+---
+
+<div
+    class="flex justify-center items-start md:w-1/2 gap-10 p-20 bg-ctp-base rounded-lg"
+>
+    <div>
+        <Image
+            src={company.logo}
+            alt={company.name}
+            height={1000}
+            width={1000}
+        />
+    </div>
+    <div class="flex flex-col gap-3">
+        <h1 class="font-JetBrains text-3xl">
+            {position} - <span class="capitalize">{type}</span>
+        </h1>
+        <h2 class="font-JetBrains text-2xl">{company.name}</h2>
+        <p class="text-ctp-green">{startDate} - {endDate}</p>
+        <p class="text-ctp-blue">
+            {location} - <span class="capitalize">{locationType}</span>
+        </p>
+        <p>{descripiton}</p>
+    </div>
+</div>

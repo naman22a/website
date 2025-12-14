@@ -71,4 +71,32 @@ const blogs = defineCollection({
     })
 });
 
-export const collections = { landing, skillset, projects, contact, blogs };
+const experienceSchema = z.object({
+    position: z.string().min(1),
+    company: z.object({
+        name: z.string().min(1),
+        logo: z.string().url()
+    }),
+    startDate: z.string(),
+    endDate: z.string(),
+    location: z.string(),
+    locationType: z.enum(['remote', 'on site']),
+    type: z.enum(['internship', 'full time', 'part time']),
+    descripiton: z.string().min(10)
+});
+
+export type ExperienceSchemaType = z.infer<typeof experienceSchema>;
+
+const experience = defineCollection({
+    type: 'data',
+    schema: z.object({ experiences: z.array(experienceSchema) })
+});
+
+export const collections = {
+    landing,
+    skillset,
+    projects,
+    contact,
+    blogs,
+    experience
+};
