@@ -3,7 +3,7 @@
         {
             "title": "Online Judge Platform",
             "description": "A production-ready LeetCode-style coding platform built using a complete microservices architecture. Features isolated code execution inside Docker containers, API Gateway routing, inter-service communication, real-time WebSockets, secure authentication, PostgreSQL + Prisma ORM, Redis caching, distributed queues, and advanced DevOps tooling including Prometheus, Grafana, Loki, Docker Compose, and GitHub Actions CI/CD.",
-            "previewLink": "https://leetcode.namanarora.xyz",
+            "previewLink": "https://judge.namanarora.xyz",
             "githubLink": "https://github.com/naman22a/leetcode-microservices",
             "image": "leetcode.png",
             "tags": [
