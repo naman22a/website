@@ -14,22 +14,22 @@ As a full-stack developer passionate about building developer tools, I set out t
 
 ## The Stack
 
--   Frontend: React, TypeScript, Monaco Editor, TailwindCSS, Shadcn UI
--   Backend: NestJS (REST API), TypeScript
--   Database: PostgreSQL with Prisma ORM
--   Auth & Sessions: Redis + Cookie-based sessions
--   Containerization: Docker (with isolated containers per submission)
+- Frontend: React, TypeScript, Monaco Editor, TailwindCSS, Shadcn UI
+- Backend: NestJS (REST API), TypeScript
+- Database: PostgreSQL with Prisma ORM
+- Auth & Sessions: Redis + Cookie-based sessions
+- Containerization: Docker (with isolated containers per submission)
 
 <br/>
 
 ## Core Features
 
--   User authentication
--   Problem listing and detail view
--   Monaco Editor with syntax highlighting
--   Code submission and execution (supporting multiple languages)
--   Real-time output
--   Docker-based code execution sandbox
+- User authentication
+- Problem listing and detail view
+- Monaco Editor with syntax highlighting
+- Code submission and execution (supporting multiple languages)
+- Real-time output
+- Docker-based code execution sandbox
 
 <br/>
 
@@ -303,17 +303,17 @@ export class SubmissionsService {
 
 ### 2. Security
 
--   No network access in containers
--   Read-only base images
--   AppArmor and seccomp profiles
--   Resource limits to prevent abuse
+- No network access in containers
+- Read-only base images
+- AppArmor and seccomp profiles
+- Resource limits to prevent abuse
 
 <br/>
 
 ## Source Code and Live Preview
 
--   Source code: https://github.com/naman22a/leetcode
--   Live Preview: https://leetcode.namanarora.xyz
+- Source code: https://github.com/naman22a/online-judge-platform
+- Live Preview: https://judge.namanarora.xyz
 
 <br/>
 
