@@ -1,6 +1,6 @@
 # 🌐 My Personal Website
 
-The website is live on [https://namanarora.xyz](https://namanarora.xyz)
+The website is live on [https://old.namanarora.xyz](https://old.namanarora.xyz)
 
 ![website](./assets/web.png)
 
